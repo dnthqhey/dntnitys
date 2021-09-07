@@ -1,0 +1,636 @@
+@charset "UTF-8";
+
+/* 프로젝트 A 모바일 추천코스 second */
+
+
+* {
+    word-break: keep-all;
+}
+
+body {
+    min-width: 320px;
+}
+
+body .topp {
+    display: block;
+    bottom: 10px;
+    right: 10px;
+    z-index: 100;
+}
+
+header {
+    height: 0px;
+    background: #010f1b;
+}
+
+header .inner {
+    min-width: 320px;
+    max-width: 640px;
+    padding: 0 20px;
+    height: 60px;
+}
+
+header .inner .logo {
+    width: 122px;
+    height: 52px;
+    background: url(../cj_night-image/cjnight_logo.png) 0 96% no-repeat;
+    background-size: cover;
+    margin-top: 5px;
+}
+
+header .inner:hover .logo {
+    width: 122px;
+    height: 52px;
+    background: url(../cj_night-image/cjnight_logo.png) 0 96% no-repeat;
+    background-size: cover;
+    margin-top: 5px;
+    position: relative;
+}
+
+
+header .inner::after {
+    display: none;
+}
+
+/* 호버하면 내려오던 거 */
+
+header .inner .mMenuBt {
+    color: rgb(237, 237, 237);
+    display: block;
+    font-size: 2rem;
+}
+
+
+header .inner .gnb {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    min-width: 320px;
+    z-index: 100;
+    background: #f1f1f3;
+    display: flex;
+    justify-content: flex-start;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+}
+
+
+header .inner .gnb.on {
+    transform: translateX(0%);
+    transition: transform 0.5s;
+}
+
+header .inner .gnb .mCloseBt {
+    color: #21115c;
+    display: block;
+    font-size: 2rem;
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    z-index: 300;
+}
+
+header .inner .gnb>div {
+    width: 130px;
+    height: 100%;
+    background: #551B86;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 100px 0;
+}
+
+header .inner .gnb>div>span {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+}
+
+header .inner .gnb>div>span:first-child {
+    color: #fff;
+}
+
+header .inner .gnb>div>span.on {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* subgnball */
+header .inner .gnb .subgnball {
+    height: auto;
+    position: unset;
+    min-width: 100px;
+    width: calc(100% - 130px);
+    /* div:gnb의 너비만큼 뺀거 */
+    background: #f1f1f3;
+    padding: 100px 0;
+    font-size: 1.1rem;
+}
+
+header .inner .gnb .subgnball>ul {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+header .inner .gnb .subgnball>ul>li {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    border-left: unset;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transform: translateX(100%);
+    transition: transform 0.5s;
+}
+
+header .inner .gnb .subgnball>ul>li.on {
+    transform: translateX(0%);
+    transition: transform 0.5s;
+}
+
+header .inner .gnb .subgnball>ul>li:last-child {
+    border-right: unset;
+}
+
+/* inner:hover일때 상단디자인 변경 및 .subgnball unset*/
+
+
+header .inner:hover .gnb>div>span {
+    color: #fff;
+}
+
+header .inner:hover .gnb .subgnball {
+    height: auto;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition: unset;
+}
+
+header .inner .gnb .subgnball>ul>li>ul {
+    margin: 0;
+}
+
+header .inner .gnb .subgnball>ul>li>ul>li,
+header .inner .gnb .subgnball>ul>li.on .first * {
+    color: rgb(39 26 80);
+}
+
+.scroll {
+    display: none;
+}
+
+/* 서브페이지 만든곳만 */
+header .inner .gnb .subgnball>ul>li>ul>li>ul .second,
+header .inner .gnb .subgnball>ul>li>ul>li>ul>li {
+    color: #D6007F;
+    cursor: pointer;
+    /* margin: 0 -5px 0 -8px; */
+}
+
+.fixedBg::before {
+    /* top: 192px;
+    left: 234px; */
+    top: 199px;
+    left: 74%;
+}
+
+/* 비주얼부터 */
+
+.visual,
+.visual::after,
+.visual::before {
+    height: 65vh;
+}
+.visual{overflow: hidden;}
+.visual::before {
+    display: block;
+}
+
+.visual img {
+    display: none;
+}
+
+.scroll {
+    display: none;
+}
+
+.visual .b01 {
+    top: 85px;
+    margin: 0px auto 0px;
+    text-align: center;
+}
+
+.visual .b01 h2 {
+    font-size: 1.6rem;
+    top: 85px;
+
+}
+
+.visual .b01 div {
+    font-size: 1.2rem;
+}
+
+.visual .b01::before {
+    top: 5px;
+    left: 22px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    content: "";
+}
+
+.visual .b01 p {
+    display: none;
+}
+
+.visual .wrap {
+    position: absolute;
+    top: 93px;
+    left: -1px;
+    width: 100%;
+    height: 334px;
+    background: url(../image/cus02.png)67% 50% no-repeat;
+    background-size: cover;
+}
+
+.visual .wrap>div {
+    display: none;
+}
+
+.visual .c01 {
+    width: 90%;
+    /* top: 390px; */
+    top: 245px;
+    left: 0px;
+    right: 1px;
+    display: flex;
+    color: rgb(221, 221, 221);
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.visual h3 {
+    width: 100%;
+    margin: -20px 0 0px 0;
+    font-size: 1.1rem;
+}
+
+.visual .c01>.info {
+    width: 33%;
+    /* margin-left: 15px; */
+}
+
+.visual .c01>.info>span {
+    width: 100%;
+    font-size: 1rem;
+
+}
+
+.visual .c01>.info>span:nth-child(1) {
+    font-size: 2rem;
+}
+
+.visual .c01>.info>span:nth-child(2) {
+    line-height: 1.4rem;
+}
+
+.visual.on .wrap .mapp {
+    background-size: 70%;
+}
+
+.visual.on .wrap .map {
+    width: 50px;
+    height: 65px;
+    background-size: 58%;
+}
+
+.visual .button {
+    bottom: 15px;
+    padding: 5px 15px;
+    font-size: 1rem;
+}
+
+/* ------------------------ */
+
+section {
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.section1 {
+    width: 100%;
+    height: 1080px;
+
+}
+
+.section1 .logo2 {
+    width: 165px;
+    height: 94px;
+    margin: 40px auto 0;
+}
+
+.section1 .logo2+p {
+    font-size: 1rem;
+    color: rgb(68, 68, 68);
+    line-height: 1.6rem;
+    text-align: center;
+    display: block;
+    margin: 160px auto 0;
+}
+
+.section1 .container {
+    position: absolute;
+    top: 395px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.section1 .container>.card {
+    width: 50%;
+    height: 250px;
+}
+
+.section1 .container>.card .imgBx {
+    width: 100%;
+    height: 250px;
+    display: block;
+}
+
+.section1 .container .card .text {
+    display: none;
+}
+
+.section1 .container .card .text {
+    display: none;
+}
+
+.section1 .container .card:hover {
+    transform: unset
+}
+
+.section1 .intro {
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin: 560px 5% 0;
+
+}
+
+.section1 .container h3 {
+    font-size: 1rem;
+
+}
+
+
+/* ------------- */
+/* .section2{ height: 120vh;} */
+.section2>span {
+    font-size: 4rem;
+    z-index: unset;
+    top: 10px;
+    left: 15px;
+}
+
+.section2 .illust {
+    display: none;
+}
+
+.section2 .txt {
+    margin: 110px 0px 0px 15px;
+    height: unset;
+}
+
+section.section2 .aniBox {
+    width: 100%;
+    right: 0;
+    top: 0;
+    display: block;
+    flex-direction: column;
+}
+
+.section2 .aniBox.left,
+.section2 .aniBox.right,
+.section2 .aniBox.bottom {
+    margin: 12px 0 0 100px;
+    width: 85%;
+    height: 203px;
+    box-shadow: unset;
+}
+
+.section3 {
+    height: 110vh;
+}
+
+.section3::before {
+    border-top: 60px solid white;
+}
+
+.section3::after {
+    border-top: 60px solid transparent;
+}
+
+.section3 .txt {
+    width: 77%;
+    margin: 90px 0px 30px 25px;
+    height: unset;
+}
+
+section.section3 .aniBox {
+    top: 56px;
+    /* right: 2px; */
+    display: block;
+    /* flex-direction: column; */
+    /* position: relative; */
+}
+
+.section3 .aniBox>div::after {
+    font-size: 0.8rem;
+    line-height: 20px;
+    height: 50px;
+
+}
+
+.section3 .aniBox.left,
+.section3 .aniBox.right,
+.section3 .aniBox.bottom {
+    width: 150px;
+    height: 150px;
+    left: 260px;
+    top: -50px;
+    margin-bottom: 10px;
+}
+
+.section4 {
+    height: 1286px;
+}
+
+.section4 .inner {
+    width: 100%;
+    margin: 0px auto 0;
+}
+
+.section4 .inner .left,
+.section4 .inner .right {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.section4 .inner .right {
+    display: block;
+}
+
+.section4 .right div {
+    padding: 0px;
+}
+
+.section4 .right div::before {
+    content: "";
+    margin: 0 auto 15px;
+}
+
+.section4 .right div::after {
+    display: none;
+}
+
+.section4 .right>div:nth-child(2)::before {
+    transform: unset
+}
+
+.section4 .pic {
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.section4 .pic>img {
+    width: 50%;
+    height: 188px;
+    padding: 0;
+}
+
+.section4 .right div::before {
+    content: "";
+    width: 58px;
+    height: 75px;
+}
+
+.section5 {
+    height: 1800px;
+    justify-content: center;
+    margin: 0;
+}
+
+.section5 .group {
+    flex-direction: column;
+
+}
+
+.section5 .group .left {
+    width: 100%;
+    top: 72px;
+    left: 0px;
+}
+
+.section5 .group .left .txt {
+    margin-left: 15px;
+}
+.section5 .group .left h3 {
+    font-size: 1.8rem;
+}
+
+.section5 .trainstation {
+    width: 110%;
+    background-size: contain;
+    margin: 3px 0 0 33px;
+}
+
+.section5 .group .left .ex {
+    margin: -20px 0px -6px 30px;
+    padding: 0 5px;
+    text-align: end;
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+.section5 .group .popup {
+    width: 98%;
+    height: 200px;
+    padding: 54px 0 0;
+    top: 465px;
+    right: 1%;
+    display: block;
+    background-size: contain;
+}
+
+.section5 .group .popup .close {
+    margin: -23px 1px 0 234px;
+    position: relative;
+    display: none;
+}
+
+.section5 .group .left .popbt {
+    display: none;
+}
+
+.section5 .group .popup span {
+    font-size: 0.9rem;
+    /* left: 25%; */
+    line-height: 1rem;
+    position: relative;
+}
+
+.section5 .group .right {
+    width: 100%;
+    top: 400px;
+    right: 0;
+    flex-direction: column;
+}
+
+.section5 .group .right .box:nth-child(2) {
+    align-items: flex-end;
+    margin-left: 320px;
+
+}
+
+.section5 .group .right>.box img {
+    margin: 44px 0 0;
+}
+
+.section5 .train {
+    background-size: contain;
+    position: absolute;
+    width: 46%;
+    height: 190px;
+    top: 620px;
+    left: 0;
+}
+
+.section5 .group .right .box:nth-child(2) span {
+    width: 295px;
+}
+
+.section5 .back {
+    background: url(../cj_night-image/옛청주역사공원.png)50% 50% no-repeat;
+    /* background-size: cover; */
+    /* position: absolute; */
+    width: 100%;
+}
+
+.section5 .group .right>.box span:first-child {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    position: absolute;
+    color: #fb5be7;
+    margin-top: 25px;
+}

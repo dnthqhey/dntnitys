@@ -1,0 +1,389 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* Noto Sans KR 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+/* Black Han Sans 폰트 */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+/* Material Icons */
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+/* font-awsome v5.10 */
+/* 프로젝트A pc 추천코스 서브페이지*/
+@keyframes scrollmouse {
+    100% {
+        transform: translate(0, 50px);
+        opacity: 0;
+    }
+}
+/* 2)스크롤 마우스 애니메이션 키프레임 추가 */
+@keyframes mapp {
+    100% {
+        transform: translate(-233px, -671px);
+        }
+}
+@keyframes map {
+    100% {
+        transform:translate(-305px, -163px);
+    }
+}
+/* @keyframes textHidden {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    } 
+  } */
+/* ob에서 가져옴 */
+
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    /* border: 1px solid rgb(174, 0, 255); */
+}
+
+:root {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+header,
+nav,
+section,
+footer {
+    width: 100%;
+}
+
+body {
+    min-width: 1580px;
+}
+
+/* header기본디자인 */
+header {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    background-color: #000;
+    z-index: 200;
+
+}
+
+header .inner {
+    min-width: 1200px;
+    max-width: 1500px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+header .inner .logo {
+    width: 138px;
+    height: 55px;
+    background: url("cj_night-image/cjnight_logo.png") 0 0 no-repeat;
+    background-size: cover;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow:hidden;
+   }
+
+
+header .inner .mMenuBt {
+    display: none;
+}
+
+header .inner .gnb {
+    width: 900px;
+    height: 100%;
+}
+
+header .inner .gnb .mCloseBt {
+    display: none;
+}
+
+header .inner .gnb > div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+header .inner .gnb > div > span {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* subgnball */
+header .inner .gnb .subgnball {
+    height: 0;
+    overflow-y: hidden;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    z-index: 200;
+    min-width: 1500px;
+    width: 100%;
+    color: rgb(211, 211, 211);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+header .inner .gnb .subgnball > ul {
+    margin: 20px 0 0 625px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+}
+
+header .inner .gnb .subgnball > ul > li {
+    width: 180px;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+header .inner .gnb .subgnball > ul > li:last-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+
+
+header .inner .gnb .subgnball > ul > li > ul {
+    width: 100%;
+    margin: 0 0 0 10%;
+
+}
+
+header .inner .gnb .subgnball > ul > li > ul > li {
+    min-height: 30px;
+    line-height: 28px;
+    padding: 0 0 0 15px;
+    /* 옆으로 20만큼 미는게 전반적으로 센터로 보임 */
+    font-weight: 500;
+
+    /* 여기 이름이 저 상세하게 줬으니까 */
+    position: relative;
+    /* 옆에 점찍혀있는 큰 타이틀들 */
+}
+
+.gnb .subgnball > ul > li > ul > li:hover {
+    /* width: 83%; */
+    height: 23px;
+    background: #EFBA26;
+    color: rgb(22, 33, 66);
+    content: "";
+    position: absolute;
+}
+
+
+
+
+
+header .inner .gnb .subgnball > ul > li.on .first * {
+    padding: 0 35px 0 0;
+    /* color: rgb(222, 33, 247)!important; */
+    /* 틀어진 첫번째문단에만 이름주고 정렬을 다시주었다 */
+
+}
+/* 서브페이지 만든곳만 */
+header .inner .gnb .subgnball .first:hover,
+header .inner .gnb .subgnball .second:hover {
+    background: #a95cf1;
+
+}
+
+header .inner .gnb .subgnball > ul > li > ul > li > a {
+    text-decoration: none;
+    color: rgb(218, 218, 218);
+}
+
+header .inner .gnb .subgnball > ul > li > ul > li > ul {
+    margin: 0 0 0 5px;
+}
+
+header .inner .gnb .subgnball > ul > li > ul > li > ul > li {
+    color: rgb(138, 138, 138);
+    min-height: 30px;
+    line-height: 30px;
+}
+
+/* inner:hover일때 상단디자인 변경 및 .subgnball */
+header .inner::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    content: "";
+
+}
+
+header .inner:hover::after {
+    background: #fff;
+    transition: all 0.3s;
+}
+
+header .inner:hover .logo {
+    background: url("cj_night-image/cjnight_logo.png") 0 -59px no-repeat;
+    position: relative;
+    background-size: cover;
+    z-index: 10;
+}
+
+header .inner:hover .gnb > div > span {
+    color: #022b4d;
+    position: relative;
+    z-index: 10;
+}
+
+/* header .inner:hover .gnb > div > span:hover, */
+.gnb > div > span:hover::before {
+    width: 62%;
+    height: 4px;
+    top: 77px;
+    left: 34px;
+    content: "";
+    background: #D6007F;
+    display: block;
+    position: absolute;
+
+}
+
+header .inner:hover .gnb > div > span::after {
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    content: "";
+    background: rgba(0, 0, 0, 0.05);
+}
+
+
+
+header .inner:hover .gnb .subgnball {
+    height: 380px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition: height 0.5s;
+}
+
+/* scroll 버튼 */
+.scroll {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    justify-content: space-between;
+}
+.scroll > span {
+    width: 100%;
+    display: block;
+    height: 20px;
+    border: 5px solid #032E55;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+
+/* 세로 선그어주기 */
+.scroll::before {
+    width: 2px;
+    height: 270px;
+    /* margin: 0 1px 0 0; */
+    background: #032E55;
+    position: absolute;
+    display: block;
+    content: "";
+    z-index: -1;
+    right: 9px;
+}
+
+.scroll > span:hover,
+.scroll > span.on {
+    background: #EFBA26;
+}
+
+
+
+.scroll span:hover::after {
+    position: absolute;
+    width: 0;
+    right: 20px;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 25px solid #EFBA26;
+    border-bottom: none;
+    content: "";
+}
+
+.scroll span:hover::before {
+    content: "충북도청";
+    position: absolute;
+    width: 8vw;
+    padding: 5px 10px 6px;
+    right: 35px;
+    z-index: 1;
+    border-radius: 15px;
+    background: #EFBA26;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.scroll span:nth-of-type(2):hover::before {
+    content: "대성로";
+}
+
+.scroll span:nth-of-type(3):hover::before {
+    content: "충북문화관";
+}
+
+.scroll span:nth-of-type(4):hover::before {
+    content: "청주향교";
+}
+
+.scroll span:nth-of-type(5):hover::before {
+    content: "청주성공회 성당";
+}
+
+.section1 {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    /* background: url(cj_night-image/night-sky.jpg)0 0 no-repeat;
+    background-size: cover; */
+}
+.section1 .txt{
+    color: #032E55;
+    font-size: 1.5rem;
+    font-weight: 400;
+top: 150px;
+left: 150px;
+position: relative;
+}
+
+.section1 .title{
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 0 0 50px 0;
+}

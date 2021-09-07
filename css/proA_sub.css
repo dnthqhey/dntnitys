@@ -1,0 +1,1425 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* Noto Sans KR 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+/* Black Han Sans 폰트 */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+/* Material Icons */
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+
+/* font-awsome v5.10 */
+/* 프로젝트A pc 추천코스 서브페이지*/
+@keyframes scrollmouse {
+    100% {
+        transform: translate(0, 50px);
+        opacity: 0;
+    }
+}
+
+/* 2)스크롤 마우스 애니메이션 키프레임 추가 */
+@keyframes mapp {
+    100% {
+        transform: translate(60px, -565px);
+    }
+}
+
+@keyframes map {
+    100% {
+        transform: translate(-18px, -73px);
+    }
+
+}
+
+@keyframes scale {
+    0% {
+        background: rgb(206, 206, 206);
+    }
+    100% {
+        background: rgb(238, 4, 121);
+    }
+}
+
+@keyframes hiddenn {
+    0% {
+        opacity: 1;
+
+    }
+    100% {
+        opacity: 0;
+
+    }
+}
+@keyframes revealLTR {
+    0% {
+        width: 0;
+        left: 0;
+    }
+    65% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    /* border: 1px solid rgb(240, 206, 161); */
+}
+
+:root {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+header,
+nav,
+section,
+footer {
+    width: 100%;
+}
+
+body {
+    min-width: 1580px;
+}
+
+/* top 버튼 */
+body .topp {
+    position: fixed;
+    bottom: 30px;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+    background: url("../image/top_btn.png") 50% 50% no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 5;
+    display: none;
+}
+
+/* header기본디자인 */
+header {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    background-color: #000;
+    z-index: 200;
+
+}
+
+header .inner {
+    min-width: 1200px;
+    max-width: 1500px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+header .inner .logo {
+    width: 138px;
+    height: 55px;
+    background: url("../cj_night-image/cjnight_logo.png") 0 0 no-repeat;
+    background-size: cover;
+}
+
+
+header .inner .mMenuBt {
+    display: none;
+}
+
+header .inner .gnb {
+    width: 900px;
+    height: 100%;
+}
+
+header .inner .gnb .mCloseBt {
+    display: none;
+}
+
+header .inner .gnb > div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+header .inner .gnb > div > span {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* subgnball */
+header .inner .gnb .subgnball {
+    height: 0;
+    overflow-y: hidden;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    z-index: 200;
+    min-width: 1500px;
+    width: 100%;
+    color: rgb(211, 211, 211);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+header .inner .gnb .subgnball > ul {
+    margin: 20px 0 0 625px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+}
+
+header .inner .gnb .subgnball > ul > li {
+    width: 180px;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+header .inner .gnb .subgnball > ul > li:last-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+
+
+header .inner .gnb .subgnball > ul > li > ul {
+    width: 100%;
+    margin: 0 0 0 10%;
+
+}
+
+header .inner .gnb .subgnball > ul > li > ul > li {
+    min-height: 30px;
+    line-height: 28px;
+    padding: 0 0 0 15px;
+    /* 옆으로 20만큼 미는게 전반적으로 센터로 보임 */
+    font-weight: 500;
+
+    /* 여기 이름이 저 상세하게 줬으니까 */
+    position: relative;
+    /* 옆에 점찍혀있는 큰 타이틀들 */
+}
+
+.gnb .subgnball > ul > li > ul > li:hover {
+    /* width: 83%; */
+    height: 23px;
+    background: #EFBA26;
+    color: rgb(22, 33, 66);
+    position: absolute;
+}
+
+header .inner .gnb .subgnball>ul>li>ul .mysub {
+    height: 23px;
+    background: #EFBA26;
+    color: rgb(22, 33, 66);
+}
+/* 틀어진 첫번째문단에만 이름주고 정렬을 다시주었다 */
+/* header .inner .gnb .subgnball > ul > li.on .first * {
+    padding: 0 35px 0 0; //위치가 안먹어서 padding조절
+    color: rgb(222, 33, 247)!important; } */
+
+header .inner .gnb .subgnball > ul > li > ul > li > ul {
+    /* margin: 0 5px 0 8px; */
+    line-height: 1.3rem;
+}
+/* 서브페이지 만든곳만 */
+header .inner .gnb .subgnball>ul>li>ul>li>ul .second,
+header .inner .gnb .subgnball>ul>li>ul>li>ul>li {
+    background: #a95cf1;
+    color: rgb(219, 219, 219);
+    cursor: pointer;
+    min-height: 30px;
+    line-height: 30px;
+    margin: 3px 0 0 0;
+}
+
+/* inner:hover일때 상단디자인 변경 및 .subgnball */
+header .inner::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    content: "";
+}
+
+header .inner:hover::after {
+    background: #fff;
+    transition: all 0.3s;
+}
+
+header .inner:hover .logo {
+    background: url("../cj_night-image/cjnight_logo.png") 0 -59px no-repeat;
+    position: relative;
+    background-size: cover;
+    z-index: 10;
+}
+
+header .inner:hover .gnb > div > span {
+    color: #022b4d;
+    position: relative;
+    z-index: 10;
+}
+
+/* header .inner:hover .gnb > div > span:hover, */
+.gnb > div > span:hover::before {
+    width: 62%;
+    height: 4px;
+    top: 77px;
+    left: 34px;
+    content: "";
+    background: #D6007F;
+    display: block;
+    position: absolute;
+
+}
+
+header .inner:hover .gnb > div > span::after {
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    content: "";
+    background: rgba(0, 0, 0, 0.05);
+}
+
+header .inner:hover .gnb .subgnball {
+    height: 380px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition: height 0.5s;
+}
+
+/* scroll 버튼 */
+.scroll {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    justify-content: space-between;
+}
+
+.scroll > span {
+    width: 100%;
+    display: block;
+    height: 20px;
+    border: 5px solid #032E55;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+
+/* 세로 선그어주기 */
+.scroll::before {
+    width: 2px;
+    height: 270px;
+    /* margin: 0 1px 0 0; */
+    background: #032E55;
+    position: absolute;
+    display: block;
+    content: "";
+    z-index: -1;
+    right: 9px;
+}
+
+.scroll > span:hover,
+.scroll > span.on {
+    background: #EFBA26;
+}
+
+.scroll span.on::after,
+.scroll span:hover::after {
+    position: absolute;
+    width: 0;
+    right: 20px;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 25px solid #EFBA26;
+    border-bottom: none;
+    content: "";
+}
+
+.scroll span.on::before,
+.scroll span:hover::before {
+    content: "충북도청";
+    position: absolute;
+    width: 8vw;
+    padding: 10px;
+    right: 35px;
+    z-index: 1;
+    border-radius: 15px;
+    background: #EFBA26;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.scroll span:nth-of-type(1).on::before {
+    content: "충북도청";
+}
+
+.scroll span:nth-of-type(2).on::before,
+.scroll span:nth-of-type(2):hover::before {
+    content: "대성로";
+}
+
+.scroll span:nth-of-type(3).on::before,
+.scroll span:nth-of-type(3):hover::before {
+    content: "충북문화관";
+}
+
+.scroll span:nth-of-type(4).on::before,
+.scroll span:nth-of-type(4):hover::before {
+    content: "청주향교";
+}
+
+.scroll span:nth-of-type(5).on::before,
+.scroll span:nth-of-type(5):hover::before {
+    content: "청주성공회 성당";
+}
+
+
+/* 여기서부터 비주얼 */
+.visual {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+/* mobile back */
+.visual::after {
+    content: "";
+    background: url(../cj_night-image/배경무늬.png)0 0 no-repeat, #B9BABA;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    top: 0;
+    z-index: -1;
+    position: absolute;
+    
+}
+.visual::before{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 90vh;
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    display: none;
+}
+
+.visual .moblie {
+    display: none;
+}
+
+
+.visual .b01 {
+    margin: 0px 950px 410px 0;
+    font-size: 1.5rem;
+    position: absolute;
+    color: #fff;
+    line-height: 2.9rem;
+    z-index: 20;
+}
+
+.visual .b01::before {
+    top: -9px;
+    position: absolute;
+    width: 61px;
+    height: 7px;
+    background: #D6007F;
+    /* display: block; */
+    content: "";
+}
+/* drag color */
+.visual .b01 div::selection,
+.visual .b01 p::selection,
+.section2 .here::selection {
+    background-color: #D6007F;
+    color: #fff;
+}
+
+.visual .b01 div {
+    margin: 15px 0 0;
+    line-height: 2rem;
+}
+
+.visual .b01 p {
+    font-size: 1.2rem;
+    color: rgb(235, 235, 235);
+    line-height: 2rem;
+}
+
+.visual .c01 {
+    top: 200px;
+    right: 300px;
+    font-size: 1.1rem;
+    position: absolute;
+    color: #032E55;
+    line-height: 2.9rem;
+    font-weight: 500;
+    z-index: 20;
+}
+
+.visual h3 {
+    color: #fff;
+}
+
+.visual .c01 > .info > span:nth-child(1) {
+    display: inline-block;
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+
+/* 순차적으로 불들어오게 */
+.visual .wrap {
+    position: relative;
+    width: 1266px;
+    height: 802px;
+    background: url(../image/cus01.png)0 0 no-repeat;
+    background-size: cover;
+}
+
+.visual .wrap > div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 670px;
+    left: 389px;
+    background: rgb(255, 255, 255);
+    border: 5px solid rgb(216, 216, 216);
+
+}
+.visual.on .wrap > div {
+    animation: scale 2s;
+    animation-fill-mode: forwards;
+}
+
+.visual.on .wrap > div:nth-child(2) {
+    top: 549px;
+    left: 530px;
+    animation-delay: 0.5s;
+}
+
+.visual.on .wrap > div:nth-child(3) {
+    top: 417px;
+    left: 814px;
+    animation-delay: 1.1s;
+}
+
+.visual.on .wrap > div:nth-child(4) {
+    top: 432px;
+    left: 1036px;
+    animation-delay: 1.5s;
+}
+
+.visual.on .wrap > div:nth-child(5) {
+    top: 156px;
+    left: 456px;
+    animation-delay: 2s;
+}
+
+.visual .wrap .map {
+    padding: 0 0 21px 42px;
+    background: url(../svg/mapPoint.svg) 0 0 no-repeat;
+    width: 50px;
+    height: 65px;
+    position: absolute;
+    z-index: 10;
+    border: none;
+
+}
+.visual.on .wrap .map {
+    transform: translate(-18px, -53px);
+    animation: map 1s infinite;
+}
+
+.visual .wrap .mapp {
+    padding: 0 0 21px 42px;
+    background: url(../svg/mapPoint.svg) 0 0 no-repeat;
+    width: 30px;
+    height: 42px;
+    position: absolute;
+    z-index: 10;
+    transform: translate(60px, -545px);
+    border: none;
+
+}
+.visual.on .wrap .mapp {
+    animation: mapp 1s infinite;
+    animation-delay: 2.2s;
+}
+
+.visual .button {
+    padding: 10px 19px;
+    position: absolute;
+    bottom: 23px;
+    background-color: #D6007F;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+    z-index: 20;
+}
+
+.visual .button:hover {
+    background-color: #032E55;
+    color: #EFBA26;
+    font-weight: 700;
+
+}
+
+/***************** section *****************/
+
+section {
+    height: 100vh;
+}
+
+/* 섹션1 bottom 구분선 그어주기 */
+section.section1 {
+    border-bottom: 1px solid #032E55;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.section1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.section1 .inner {
+    width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+
+}
+
+.section1 .photo {
+    width: 29%;
+    height: 300px;
+    margin: 50px 0 0 46px;
+    cursor: pointer;
+    background: url(../cj_night-image/충북도청.jpg)50% 0 no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+.section1 .photo:hover::after {
+    width:100%;
+    height: 310px;
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section1 .photo .explain {
+    display: none;
+    width: inherit;
+}
+
+.section1 .photo:hover .explain {
+    display: block;
+    width: 100%;
+    height: 310px;
+    position: absolute;
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 43px 35px;
+    color: #fff;
+    z-index: 10;
+    text-align: justify;
+}
+
+.section1 .photo::before {
+    width: 25px;
+    height: 25px;
+    content: "";
+    background-color: #D6007F;
+    position: absolute;
+    border-radius: 50%;
+    margin: 10px 0 0 10px;
+}
+
+.section1 .img {
+    width: 20%;
+    height: 202px;
+    margin: 244px 0 0 370px;
+    position: absolute;
+    z-index: -1;
+    background: url(../cj_night-image/도민홍보관.png)50% 12% no-repeat;
+    background-size: cover;
+}
+
+.section1 .txt {
+    width: 400px;
+    margin-right: 100px;
+}
+/* 모바일에서 나타날 로고,txt*/
+.section1 .mob {
+    display: none;
+}
+.section1 .txt .logo2 {
+    width: 250px;
+    height: 144px;
+    background: url("../svg/둥근로고.svg") 0 0 no-repeat;
+    background-size: cover;
+    margin: 0px auto 150px;
+}
+
+.section1 .txt > div:nth-of-type(2),
+.section1 .txt > div:nth-of-type(4) {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #9FA0A0;
+    margin: 50px 0 0;
+}
+
+
+.section1 .line {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #162142;
+    margin: 0 15px 0 0;
+    line-height: 3.5rem;
+    display: inline-block;
+}
+
+.section1 .eng {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #898989;
+    line-height: 2rem;
+    margin-right: 20px;
+}
+
+.section1 .line:last-child {
+    display: none;
+}
+
+/* 문화재 아래 가로 선그어주기 */
+.section1 .line::after {
+    width: 398px;
+    height: 1px;
+    background: #032E55;
+    position: absolute;
+    display: block;
+    content: "";
+}
+
+.section1 .adr {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #898989;
+    line-height: 2rem;
+    /* margin-right: 20px; */
+}
+
+/* 3)스크롤 마우스 이미지랑 크기 애니메이션 잡아준다 */
+.section1 .scrollmouse {
+    background: url(../svg/scroll.svg) 50% 50% no-repeat;
+    width: 100%;
+    height: 63px;
+    z-index: 100;
+    animation: scrollmouse 1.5s infinite;
+}
+
+/* ------------------------------------------------------------ */
+.section2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+
+.section2 .wrap {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 155px;
+    right: 220px;
+}
+
+.section2 .move {
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
+    margin: 0 0 0 190px;
+    position: relative;
+}
+
+
+.section2 .wrap .title {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #032E55;
+    margin: 0 0 41px 0;
+    width: 100%;
+}
+
+.section2 .intro {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #676767;
+    top: 304px;
+    left: 380px;
+    position: absolute;
+}
+
+.section2 .here {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #676767;
+}
+
+.section2 .poster > img {
+    top: 60px;
+    width: 135px;
+    height: 187px;
+    position: relative;
+    margin: 0 10px 0 10px;
+}
+
+section.section2 .move .aniBox {
+    width: 380px;
+    height: 240px;
+}
+
+section.section2 .move .aniBox.left {
+    margin: -282px 0 0 -3%;
+    background: url(../cj_night-image/가람신작.jpg)50% 50% no-repeat;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    position: relative;
+}
+
+section.section2 .move .aniBox.right {
+    margin: 27px 0px 0px 1%;
+    background: url(../cj_night-image/대성로.jpg)50% 30% no-repeat;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    position: relative;
+}
+
+section.section2 .move .aniBox.top {
+    margin: 0 0% -178px -28%;
+    background: url(../cj_night-image/대성비디오.jpg)0% 0% no-repeat;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    width: 290px;
+    height: 195px;
+    position: relative;
+}
+
+section.section2 .aniBox.left::before,
+section.section2 .aniBox.right::before,
+section.section2 .aniBox.top::before {
+    width: 38px;
+    height: 41px;
+    content: "1";
+    top: 43px;
+    left: -38px;
+    background: #e40f8f;
+    position: absolute;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #fff;
+    text-indent: 15px;
+}
+
+section.section2 .aniBox.right::before {
+    content: "2";
+}
+
+section.section2 .aniBox.top::before {
+    content: "3";
+}
+
+.section2 .aniBox.top::after {
+    content: "";
+    width: 234px;
+    height: 130px;
+    background: url(../image/video.png) 0 0 no-repeat;
+    position: absolute;
+    background-size: cover;
+    bottom: -74px;
+    right: 144px;
+}
+
+.section2 .daes {
+    background: url(../svg/122.svg) 50% 50% no-repeat;
+    width: 43%;
+    height: 614px;
+    position: absolute;
+    z-index: -1;
+    transform: translate(484px, -146px);
+    opacity: 0.6;
+}
+
+/* ------------------------------------------- */
+.section3 {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.section3 .txt {
+    top: 196px;
+    left: 52px;
+    position: relative;
+    /* position: relative; */
+}
+
+.section3 h2 {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 3.4rem;
+    font-weight: 400;
+    color: #032E55;
+}
+
+.section3 .txt > span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #999;
+}
+
+.section3 .history {
+        width: 45%;
+        height: 350px;
+        /* display: flex;
+        justify-content: flex-start; */
+        background: url(../cj_night-image/충북문화관단색.jpg)0% 0% no-repeat;
+        background-size: cover;
+        position: relative;
+        left: 0;
+        z-index: 1;
+        top: 34%;
+        transform: translateY(-34%);
+        overflow: hidden;   
+}
+.section3.on .history .ract {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    background: url(../cj_night-image/충북문화관.jpg)0% -90px no-repeat;
+    background-size: cover;
+}
+
+
+/* 컬러트랜지션 ----------------------------*/
+.section3.on .history .ract:before,
+.section3.on .history .ract:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0;
+    height: 100%;
+    z-index: 20;
+}
+
+.section3.on .history .ract:before {
+    background-color: #7e7e7e;
+    animation-delay: .3s;
+
+}
+.section3.on .history .ract:after {
+    background-color: #45120f;
+    animation-delay: .5s;
+}
+
+.section3.on .history .ract {
+    animation-delay: 3s;
+}
+
+.section3.on .history .ract:before {
+    animation: revealLTR 1.8s ease;
+}
+.section3.on .history .ract:after {
+    animation: revealLTR 1s .6s ease;
+}
+.section3.on .history .ract {
+    animation: hiddenn 1s .7s ease;
+    animation-fill-mode: forwards;
+}
+/* ------------------------------------------- */
+.section3 .history .title{
+    color: #fff;
+    transform: translate(33%, 23%);
+    font-size: 2.3rem;
+    font-weight: 500px;
+    width: 290px;
+    position: absolute;
+}
+
+.section3 .history ul > li > span:first-child {
+    color: #e40f8f;
+    font-size: 2rem;
+    padding: 0 10px 0 0;
+    font-weight: 500px
+}
+
+.section3 .history ul > li > span:last-child {
+    color: #999;
+    font-size: 1.1rem;
+    font-weight: 200px;
+}
+
+.section3 .writer {
+    width: 70%;
+    height: 480px;
+    display: flex;
+    justify-content: flex-end;
+    background: url(../cj_night-image/12문학인.png) 0% 50% no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    /* 밑에서도 이미지사이즈등의 변동이 있어도 50로 잡아줘서 센터가 되게함*/
+    align-items: center;
+    overflow: hidden;
+}
+
+.section3 .writer .twelve {
+    display: flex;
+    flex-direction: column;
+    transform: translate(-80px, 125px);
+
+}
+
+.section3 .twelve > span {
+    color: #162142;
+    font-size: 2rem;
+    font-family: 'Black Han Sans', sans-serif;
+    font-weight: 400;
+}
+
+.section3 .person {
+    display: inline-block;
+    width: 343px;
+    color: #5f5f5f;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+.section3 .person span {
+    padding: 3px 10px;
+}
+
+.section3 .person span:hover {
+    background: #EFBA26;
+    color: #fff;
+}
+
+.section3 .twelve > p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    color: #e40f8f;
+    top: 15px;
+    left: 156px;
+}
+
+.section3 p::before {
+    position: absolute;
+    top: 13px;
+    left: 85px;
+    background: #e40f8f;
+    content: "";
+    width: 80px;
+    height: 1px;
+}
+
+.section3 p::after {
+    position: absolute;
+    top: 9px;
+    left: 156px;
+    background: #e40f8f;
+    content: "";
+    width: 10px;
+    height: 1px;
+    transform: rotate(45deg);
+}
+
+.section3 .forest {
+    width: 378px;
+    height: 216px;
+    position: absolute;
+    z-index: 1;
+    background: url(../cj_night-image/숲속갤러리.png)0% 0% no-repeat;
+    top: 553px;
+    left: 258px;
+    background-size: cover;
+}
+
+.section3 .forest::after {
+    color: #fff;
+    font-size: 1.1rem;
+    content: "숲속 갤러리";
+    background: #EFBA26;
+    bottom: -106px;
+    left: 51px;
+    padding: 2px 5px;
+    position: relative;
+}
+
+.section4 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section4 .line01 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+
+/* 향교 이미지 */
+.section4 .line01 .right img {
+    width: 1150px;
+    height: 700px;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    opacity: 0.2;
+    overflow: hidden;
+}
+
+.section4 .left {
+    /* width: 1200px; */
+    transform: translate(100px, 50px);
+}
+
+.section4 .left > div:nth-of-type(1) {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #9FA0A0;
+}
+
+.section4 .line {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #162142;
+    margin: 0 15px 0 0;
+    line-height: 3.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section4 .eng {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #898989;
+    line-height: 2rem;
+    margin-right: 20px;
+}
+
+.section4 .line:last-child {
+    display: none;
+}
+
+/* 문화재 아래 가로 선그어주기 */
+.section4 .line::after {
+    width: 343px;
+    height: 1px;
+    background: #032E55;
+    position: absolute;
+    display: block;
+    content: "";
+}
+
+.section4 .adr {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #898989;
+    line-height: 2rem;
+    /* margin-right: 20px; */
+}
+
+.section4 .bt {
+    width: 555px;
+    height: 45px;
+}
+
+.section4 .bt > span {
+    position: relative;
+    top: 20px;
+    margin-right: 9px;
+    cursor: pointer;
+    border: 2px solid #162142;
+    font-size: 1.2rem;
+    padding: 3px 10px;
+    color: #162142;
+    border-radius: 13px;
+}
+
+.section4 .bt > span:nth-child(1),
+.section4 .bt > span:hover {
+    background: #162142;
+    color: #fff;
+    cursor: pointer;
+}
+
+.section4 .left p {
+    margin: 70px 0 0 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #5a5a5a;
+    line-height: 2rem;
+}
+
+.section4 .mySwiper {
+    width: 95%;
+    top: 100px;
+    height: 450px;
+    box-sizing: border-box;
+    z-index: 3;
+    --swiper-theme-color: #D6007F;
+}
+
+.section4 .swiper-free-mode > .swiper-wrapper {
+    align-items: center;
+    margin: 100px auto 0px;
+}
+
+.section4 .swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section4 .swiper-slide:nth-child(1),
+.section4 .swiper-slide:nth-child(4) {
+    height: 37%;
+    background: url(../cj_night-image/명륜당.png)0% 0% no-repeat;
+    background-size: contain;
+    top: 169px;
+}
+
+.section4 .swiper-slide:nth-child(2),
+.section4 .swiper-slide:nth-child(5) {
+    height: 40%;
+    background: url(../cj_night-image/대성전.png)53% 0% no-repeat;
+    background-size: contain;
+    top: 153px;
+}
+
+.section4 .swiper-slide:nth-child(3),
+.section4 .swiper-slide:nth-child(6) {
+    height: 40%;
+    background: url(../cj_night-image/증반실1.png)39% 0% no-repeat;
+    background-size: contain;
+    top: 153px;
+}
+.section4 .mySwiper .swiper-slide::after {
+    content: "명륜당";
+    display: block;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    line-height: 13rem;
+    border-radius: 50%;
+    background-color: rgba(243, 212, 36, 0.7);
+    font-size: 1.9rem;
+    color: #fff;
+    font-weight: 400;
+    bottom: -43px;
+    left: 0;
+    z-index: -10;
+    text-align: center;    
+}
+
+.section4 .mySwiper .swiper-slide:nth-child(2)::after,
+.section4 .mySwiper .swiper-slide:nth-child(5)::after {
+    content: "대성전";
+
+}
+
+.section4 .mySwiper .swiper-slide:nth-child(3)::after,
+.section4 .mySwiper .swiper-slide:nth-child(6)::after {
+    content: "증반실";
+}
+
+.section5 {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+.section5 img:nth-of-type(1) {
+    width: 420px;
+    height: 310px;
+    top: 291px;
+    left: -50px;
+    position: relative;
+    object-fit: cover;
+}
+
+.section5 img:nth-of-type(2) {
+    width: 316px;
+    height: 214px;
+    top: 517px;
+    right: 406px;
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+}
+
+
+.section5 .txt {
+    margin: 300px 0 0;
+    position: relative;
+
+}
+
+.section5 .txt > div:nth-of-type(1),
+.section5 .txt > div:nth-of-type(3) {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #9FA0A0;
+    margin: 50px 0 0;
+}
+
+.section5 .line {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #162142;
+    margin: 0 15px 0 0;
+    line-height: 3.5rem;
+    display: inline-block;
+}
+
+.section5 .eng {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #898989;
+    line-height: 2rem;
+    margin-right: 20px;
+}
+
+.section5 .line::after {
+    width: 398px;
+    height: 1px;
+    background: #032E55;
+    position: absolute;
+    display: block;
+    content: "";
+}
+
+.section5 .adr {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #898989;
+    line-height: 2rem;
+    /* margin-right: 20px; */
+}
+
+.section5 p {
+    margin: 30px 0 10px 0px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #5a5a5a;
+    line-height: 2rem;
+}
+
+.section5 .photo {
+    position: relative;
+}
+
+.section5 .photo .dot {
+    width: 250px;
+    height: 250px;
+    background: url(../cj_night-image/dot.png)0 0 no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    top: 160px;
+    right: -50px;
+    opacity: 30%;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    color: #fff;
+    background: #132734;
+    height: 150px;
+    bottom: 0;
+    position: relative;
+}
+
+footer .web-logo {
+    flex-direction: row;
+    align-items: center;
+
+}
+
+footer .web-logo > img {
+    width: 50px;
+    /* height: 50px; */
+    object-fit: cover;
+}
