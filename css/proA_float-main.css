@@ -5,10 +5,6 @@
 /* Material Icons */
 @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
 /* font-awsome v5.10 */
-@import url('IEstyle/main-IEstyle.css');
-/* IE cross browsing */
-
-/* 프로젝트A pc ver. */
 
 @keyframes scrollmouse {
     100% {
@@ -16,7 +12,6 @@
         opacity: 0;
     }
 }
-/* leftt map애니메이션 */
 @keyframes mapp {
     100% {
         transform: translate(328px, 72px);
@@ -29,7 +24,6 @@
     }
 
 }
-/* rightt map애니메이션 */
 @keyframes mappb {
     100% {
         transform: translate(-42px, -620px);
@@ -62,7 +56,6 @@
     padding: 0px;
     margin: 0px;
     text-decoration: none;
-    /* border: 1px solid rgb(243, 192, 22); */
 }
 
 :root {
@@ -82,20 +75,12 @@ a {
     text-decoration: none;
 }
 
-
-/* top 버튼 */
-body .topp {
-    position: fixed;
-    bottom: 30px;
-    right: 5%;
-    width: 50px;
-    height: 50px;
-    background: url("../image/top_btn.png") 50% 50% no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    z-index: 5;
-    display: none;
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
+
 
 /* header기본디자인 */
 header {
@@ -108,22 +93,19 @@ header {
 }
 
 header .inner {
-    min-width: 1200px;
-    max-width: 1500px;
+    width: 1500px;
     height: 100px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     overflow: hidden;
 }
 
 header .inner .logo {
     width: 138px;
     height: 55px;
+    margin: 23px 0 0;
     background: url("../cj_night-image/cjnight_logo.png") 0 0 no-repeat;
     background-size: cover;
-    display: block;
+    float: left;
 }
 
 
@@ -134,8 +116,8 @@ header .inner .mMenuBt {
 header .inner .gnb {
     width: 900px;
     height: 100%;
-   
-    
+    float: right;
+
 }
 
 header .inner .gnb .mCloseBt {
@@ -143,20 +125,23 @@ header .inner .gnb .mCloseBt {
 }
 
 header .inner .gnb > div {
+    width: 100%;
     height: 100%;
-    display: flex;
+    float: right;
 
 }
 
 header .inner .gnb > div > span {
     width: 100%;
     height: 100px;
+    /* padding: 0 4px 0 4px; */
     line-height: 100px;
     text-align: center;
     font-size: 1.4rem;
     font-weight: 500;
     color: #fff;
     cursor: pointer;
+    margin: 0 0 0 75px;
 }
 
 /* subgnball */
@@ -174,15 +159,14 @@ header .inner .gnb .subgnball {
 }
 
 header .inner .gnb .subgnball > ul {
-    margin: 20px 0 0 797px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    /* height: 300px; */
+    margin: 20px 0 0 800px;
     position: relative;
-    
+
 }
 
 header .inner .gnb .subgnball > ul > li {
+    float: left;
     width: 180px;
     border-left: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -202,10 +186,9 @@ header .inner .gnb .subgnball > ul > li > ul {
 header .inner .gnb .subgnball > ul > li > ul > li {
     min-height: 30px;
     line-height: 28px;
-    padding: 0 0 0 22px;
+    padding: 0 0 0 25px;
     /* 옆으로 20만큼 미는게 전반적으로 센터로 보임 */
     font-weight: 500;
-
     /* 여기 이름이 저 상세하게 줬으니까 */
     position: relative;
     /* 옆에 점찍혀있는 큰 타이틀들 */
@@ -219,7 +202,7 @@ header .inner .gnb .subgnball > ul > li > ul > li {
     position: absolute;
 }
 
-header .inner .gnb .subgnball>ul>li>ul .mysub {
+header .inner .gnb .subgnball > ul > li > ul .mysub {
     height: 23px;
     background: #EFBA26;
     color: rgb(22, 33, 66);
@@ -234,14 +217,14 @@ header .inner .gnb .subgnball > ul > li > ul > li > ul {
     line-height: 1.3rem;
 }
 /* 서브페이지 만든곳만 */
-header .inner .gnb .subgnball>ul>li>ul>li>ul .second,
-header .inner .gnb .subgnball>ul>li>ul>li>ul>li {
+header .inner .gnb .subgnball > ul > li > ul > li > ul .second,
+header .inner .gnb .subgnball > ul > li > ul > li > ul > li {
     background: #a95cf1;
     color: rgb(219, 219, 219);
     cursor: pointer;
     min-height: 30px;
     line-height: 30px;
-    margin: 3px 0 0 10px;
+    margin: 3px 0 0 0;
 }
 
 /* inner:hover일때 상단디자인 변경 및 .subgnball */
@@ -312,7 +295,7 @@ header .inner:hover .gnb .subgnball {
 
 .visual .b01 {
     width: 30%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     position: absolute;
     color: #fff;
     z-index: 20;
@@ -449,8 +432,7 @@ header .inner:hover .gnb .subgnball {
     margin: 0 auto;
     top: 400px;
     left: 20%;
-    --swiper-pagination-color: rgb(255, 208, 1);
-
+    --swiper-pagination-color: rgb(255, 208, 1) !important;
 }
 
 
@@ -462,38 +444,30 @@ header .inner:hover .gnb .subgnball {
     height: 63px;
     z-index: 100;
     animation: scrollmouse 1.5s infinite;
-    top: 998px;
+    top: 860px;
     position: absolute;
 }
 
 /* 여기서부터 view */
 .view {
     width: 100%;
-    /* top: 100px; */
     position: relative;
-    display: flex;
-    justify-content: space-between;
-
+    height: 80vh;
 }
 .leftt {
+    float: left;
     width: 50%;
     height: 80vh;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
     position: relative;
     overflow: hidden;
     background: url(../cj_night-image/배경무늬.png)0 0 no-repeat, #B9BABA;
     background-size: cover;
-
 }
 
 .rightt {
+    float: right;
     width: 50%;
     height: 80vh;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
     position: relative;
     overflow: hidden;
     /* background: url(../cj_night-image/배경무늬.png)0 0 no-repeat, #B9BABA;
@@ -658,7 +632,7 @@ header .inner:hover .gnb .subgnball {
     font-weight: 500;
     text-align: center;
     z-index: 20;
-    margin: 0 auto;
+    margin: 0 0 0 37%;
 
 }
 
@@ -727,10 +701,9 @@ header .inner:hover .gnb .subgnball {
 /* 순차적으로 불들어오게 */
 .rightt .wrap {
     position: absolute;
-    /* overflow: hidden; */
     width: 745px;
-    height: 741px;
-    top: 25px;
+    height: 723px;
+    top: -10px;
     left: 97px;
     z-index: 1;
     background: url(../image/cus02.png)50% 0% no-repeat;
@@ -811,18 +784,13 @@ header .inner:hover .gnb .subgnball {
 
 section.video {
     width: 100%;
-    height: 500px;
-    margin: 250px auto 0;
-    display: flex;
-
+    height: 600px;
 }
 
 section.video .inner {
     width: 900px;
-    height: 500px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+    height: 318px;
+    margin: 140px auto 0;
 }
 
 section.video h1 {
@@ -831,13 +799,17 @@ section.video h1 {
 
 section.video .content {
     text-align: left;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
     font-size: 2.1rem;
     font-weight: 500;
     color: #010f1b;
     position: relative;
+    width: 300px;
+    top: 70px;
+}
+
+section.video .content > span {
+    display: block;
+
 }
 
 section.video .content > span:nth-child(2) {
@@ -856,8 +828,6 @@ section.video .content button {
     background: none;
     cursor: pointer;
     margin: 20px 0 0 0;
-
-
 }
 
 .video .content button:hover {
@@ -882,13 +852,9 @@ section.video .content button:hover::before {
     color: rgb(112, 112, 112);
 }
 
-.sns {
-    display: flex;
-    justify-content: left
-}
-
 .sns span {
     list-style-type: none;
+    float: left;
 }
 
 .sns > span > a {
@@ -927,103 +893,58 @@ section.video .content button:hover::before {
 
 /* ---------동영상 링크 & 버튼--------- */
 
-section.video .vd {
+section.video .inner .vd {
     width: 560px;
     height: 315px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    float: right;
     position: relative;
     outline: none;
     border: none;
-}
-
-section.video .ytp-large-play-button {
-    /* position: absolute; */
-    left: 50%;
-    top: 50%;
-    width: 68px;
-    height: 48px;
-    margin-left: -34px;
-    margin-top: -24px;
-    -webkit-transition: opacity .25s cubic-bezier(0, 0, 0.2, 1);
-    transition: opacity .25s cubic-bezier(0, 0, 0.2, 1);
-    z-index: 63;
-    display: none;
-}
-
-/* 동영상 버튼 */
-section.video i {
-    position: absolute;
-    font-size: 5rem;
-    border-radius: 50%;
-    bottom: -297px;
-    left: 66%;
-    color: #D6007F;
-    background-color: #fff;
+    top: 0px;
 }
 
 
-/* section.video .vd::after {
-    position: absolute;
-    color: #fff;
-    content: "\f04b";
-    right: 31%;
-    top: 21px;
-    font-size: 1.9rem;
-    z-index: 350;  
-
-} */
 
 /* ---------여기부터 course --------- */
 
 section.course {
     width: 100%;
     height: 500px;
-    position: relative;
-   
+    /* padding: 70px 0; */
 }
 
 section.course .inner {
     width: 100%;
-    height: 100%;    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-section.course .inner > .box {
-    width: 50%;
-    height: 500px;
-    display: flex;
-    flex-direction: column;    
-    background-color: #162142;
+    height: 100%;
 
 }
-section.course .box.left .title {
+section.course .left .title {
+    margin: 25px 0px 20px 20px;
     font-size: 1.7rem;
     line-height: 2rem;
     color: #fff;
-    display: flex;
-    position: relative;
-    top: 25px;
-    left: 40px;
-    width: 70%;
-}
-section.course .box.left .title h3 {
-    font-weight: 500;
-    margin-right: 5px;
 
 }
-section.course .box.left .title h4 {
+section.course .left .title h3 {
+    font-weight: 500;
+    margin-right: 5px;
+    float: left;
+
+}
+section.course .left .title h4 {
     font-weight: 300;
     font-size: 2.1rem;
 }
 
-
+section.course .inner > .left {
+    width: 50%;
+    float: left;
+    height: 500px;
+    position: relative;
+    background-color: #162142;
+}
 section.course .inner .box .con {
     width: 85%;
-    display: flex;
-    justify-content: space-between;
     margin: 50px auto 10px;
     left: 10px;
     height: 170px;
@@ -1034,12 +955,16 @@ section.course .inner .box .con > div {
     background-size: cover;
     width: 95px;
     height: 90px;
-    transform: translate(0px, 50px);
+    /* transform: translate(0px, 50px); */
     font-size: 1.1rem;
     color: #fff;
     text-align: center;
     line-height: 18rem;
     cursor: pointer;
+    float: left;
+    margin-left: 53px;
+    z-index: 3;
+
 }
 
 section.course .inner .box .con > div:hover::after {
@@ -1048,20 +973,18 @@ section.course .inner .box .con > div:hover::after {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    top: 0;
-    right: -17px;
     position: absolute;
 }
 
 section.course .inner .box .con > div:hover::before {
     content: "";
-    background-color: #4d0669;
+    background-color: rgba(76, 5, 109, 0.5);
     width: 97px;
     height: 10px;
-    top: 123px;
-    z-index: -1;
-    left: 0;
+    top: 233px;
+    /* z-index: -1; */
     position: absolute;
+    /* background-blend-mode: multiply; */
 }
 
 section.course .inner .box .con > div:nth-of-type(3)::before,
@@ -1076,31 +999,24 @@ section.course .inner .box .con > div:nth-of-type(5)::before {
 
 section.course .inner .box .con > div:nth-of-type(2) {
     background: url(../image/con2.png)50% 50% no-repeat;
-    ;
     background-size: contain;
-    transform: translate(0px, 50px);
+
 }
 section.course .inner .box .con > div:nth-of-type(3) {
     background: url(../image/con3.png)50% 50% no-repeat;
-    ;
     background-size: contain;
-    transform: translate(0px, 50px);
-    text-indent: -21px;
+
 }
-section.course .inner  .box .con > div:nth-of-type(4) {
+section.course .inner .box .con > div:nth-of-type(4) {
     background: url(../image/con4.png)50% 50% no-repeat;
-    ;
     background-size: contain;
-    width: 66px;
-    height: 80px;
-    text-indent: 5px;
-    transform: translate(0px, 50px);
+
+
 }
 section.course .inner .box .con > div:nth-of-type(5) {
     background: url(../image/con6.png)50% 50% no-repeat;
     background-size: contain;
-    transform: translate(0px, 50px);
-    text-indent: -13px;
+    text-indent: -14px;
 }
 
 
@@ -1110,18 +1026,14 @@ section.course .inner .swiper-container {
     background-color: #162142;
     /* height: 100%; */
 }
-
 section.course .inner .art3 {
     width: 100%;
     height: 60px;
-    margin: 70px 0 0 0;
+    margin: 50px 0 0 0;
     border-top: 1px solid rgb(109, 109, 109);
     border-bottom: 1px solid rgb(109, 109, 109);
 }
-section.course .inner .art3 .swiper-slide {
-    display: flex;
-    align-items: center;
-}
+
 section.course .inner .art3 .swiper-slide span {
     height: 78px;
     line-height: 78px;
@@ -1143,7 +1055,6 @@ section.course .inner .art4 .swiper-slide span.g3 {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 section.course .inner .art4 {
     width: 100%;
     height: 60px;
@@ -1151,10 +1062,7 @@ section.course .inner .art4 {
     border-top: 1px solid rgb(109, 109, 109);
     border-bottom: 1px solid rgb(109, 109, 109);
 }
-section.course .inner .art4 .swiper-slide {
-    display: flex;
-    align-items: center;
-}
+
 section.course .inner .art4 .swiper-slide span {
     height: 78px;
     line-height: 78px;
@@ -1171,40 +1079,29 @@ section.course .inner .art4 .swiper-slide span.g3 {
     margin: 0 10px 0 10px;
 }
 /* 폼요소  */
-.course .inner .box.right {
+.course .inner > .right {
     background: url(../image/pattern.png) 50% 50% no-repeat;
+    background-size: cover;
+    float: right;
+    width: 50%;
+    height: 500px;
+    position: relative;
+
 }
 
-.course .box.right h3 {
-    background: #162142;
-    width: 110px;
-    height: 165px;
-    display: flex;
-    color: #FFF;
-    font-size: 1.7rem;
-    line-height: 2.2rem;
-    justify-content: center;
-    padding-top: 15px;
-    top: 0;
-    left: 40px;
-    position: relative;    
-}
 
 /* ------------------------------------------ */
 .t1 {
-    display: flex;
-    flex-direction: row;
-    margin: 20px 0 30px 506px;
+    margin: 20px  0px  30px 650px;
 }
 
 .t1 label {
     margin: 0 20px 0 0;
 }
 
-
 .t1 .checks {
     position: relative;
-
+    float: left;
 }
 
 .t1 .checks input[type="radio"] {
@@ -1225,7 +1122,6 @@ section.course .inner .art4 .swiper-slide span.g3 {
     padding-left: 30px;
     cursor: pointer;
     user-select: none;
-
 }
 
 .t1 .checks input[type="radio"] + label:before {
@@ -1275,14 +1171,10 @@ section.course .inner .art4 .swiper-slide span.g3 {
 /* -------------------------- */
 .course .inner .right .c03 {
     width: 100%;
-    height: 100%;
+    height: 290px;
     font-size: 1.5rem;
     color: rgb(77, 77, 77);
-    display: flex;
-    flex-direction: column;
     line-height: 0.9rem;
-    align-items: center;
-    margin: 60px 0 0 0;
 }
 
 .course .inner .right .c03 input {
@@ -1296,10 +1188,7 @@ section.course .inner .art4 .swiper-slide span.g3 {
 }
 
 .tel span:first-child {
-
     position: relative;
-
-
 }
 
 .tel span:first-child::after {
@@ -1331,7 +1220,7 @@ form .bt:hover {
 }
 
 .course .inner .right .c03 form {
-    margin: 0 auto;
+    margin: 0 0 0 80px;
 }
 /* 접수완료 */
 .course .inner .right .popup {
@@ -1342,16 +1231,15 @@ form .bt:hover {
     top: 60px;
     color: #999;
     left: 35%;
-    background-color: rgba(26, 26, 26,0.8);
+    background-color: rgba(26, 26, 26, 0.8);
     box-shadow: 0 3px 5px rgb(0 0 0 / 30%);
     display: none;
     text-align: center;
     font-size: 1rem;
     line-height: 1.5rem;
-   
 }
 
-.course .inner .right .popup >span:nth-of-type(1){
+.course .inner .right .popup > span:nth-of-type(1) {
     font-size: 1.5rem;
     line-height: 5rem;
     font-weight: 400;
@@ -1359,16 +1247,15 @@ form .bt:hover {
 }
 
 
-.course .inner .right .popup > span:nth-of-type(1)::before{
+.course .inner .right .popup > span:nth-of-type(1)::before {
     width: 300px;
-    height: 1px;
+    height: 2px;
     top: 64px;
     background-color: #999;
     content: "";
     margin: 0 0 0 -45px;
     position: absolute;
 }
-
 
 .course .inner .right .popup .close {
     width: 20px;
@@ -1382,22 +1269,19 @@ form .bt:hover {
     font-size: 1rem;
     background-color: rgb(240, 14, 228);
     border-radius: 50%;
-    cursor: pointer;
 }
-
-
+/* 
 .course .inner .right .c03 > form {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+   
+} */
 
 .course .inner .c03 p {
     margin: 0 0 0 490px;
 }
 
 .course .inner .right form > p {
-    margin: 0 10px 0 0;
+    margin: 50px 0px 0 10px;
+    float: left;
 }
 
 .right form > p > input {
@@ -1407,19 +1291,17 @@ form .bt:hover {
 .course .inner .right > .bottom {
     background: #EFBA26;
     width: 100%;
-    height: 35%;
-    display: flex;
-    justify-content: center;
+    height: 120px;
     padding: 0 3%;
-    align-items: center;
     font-size: 1.7rem;
+    padding:0px 105px 0;
     color: #fff;
+
 }
 
-
 .course .inner .bottom span {
-    margin: 0 80px 0 0;
-
+    margin: 9px 85px 0 0;
+    float: left;
 }
 
 
@@ -1444,7 +1326,7 @@ form .bt:hover {
 /* ---------------여기부터 news------------------- */
 section.news {
     width: 100%;
-    height: 950px;
+    height: 1000px;
     background: url(../cj_night-image/청녕각.jpg) 50% 50% no-repeat;
     background-size: cover;
     position: relative;
@@ -1475,7 +1357,6 @@ section.news h2 {
 
 section.news .mySwiper4 {
     width: 60%;
-    height: 655px;
     box-sizing: border-box;
     margin: 0 20%;
     z-index: 3;
@@ -1483,20 +1364,19 @@ section.news .mySwiper4 {
 }
 
 .mySwiper4 .swiper-wrapper {
-    align-items: center;
+    margin: 69px auto 0 !important;
 
 }
 
 /* ......같은 이름인것같은데 다르게 적용되던거! 배경색을 텍스트에 줬어야함  ...... */
 section.news .swiper-slide {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    flex-direction: column;
+    /* overflow: hidden;    */
     font-size: 1.9rem;
     color: #FFF;
     line-height: 1.2;
     font-weight: 600;
+    float: left;
+    height: auto;
 }
 
 section.news .swiper-slide:nth-child(3n-1) {
@@ -1559,11 +1439,12 @@ section.news .swiper-slide:nth-child(3n-1) {
 .mySwiper4 .swiper-slide .text {
     width: 100%;
     height: 146px;
-    flex-direction: column;
     background: #606060;
     padding: 20px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+
+
 }
 
 .mySwiper4 .swiper-slide:nth-child(even) .text {
@@ -1585,7 +1466,6 @@ section.news .swiper-slide:nth-child(3n-1) {
     font-weight: 400;
     margin: 20px 0 0 0;
     display: block;
-
 }
 
 .news .swiper-button-next,
@@ -1602,18 +1482,19 @@ section.news .swiper-slide:nth-child(3n-1) {
     color: #fff;
     padding: 0 6px 0 0;
     z-index: 3;
-   
+    background: url(../image/prev.png)41% 50% no-repeat;
+    background-size:46%
 }
 
 .news .swiper-button-next {
     padding: 0 0 0 6px;
-   
+    background: url(../image/next.png)63% 50% no-repeat;
+    background-size:46%
 }
 
 .swiper-button-next::after,
 .swiper-container-rtl .swiper-button-prev::after {
     content: 'next';
-    
 }
 
 
@@ -1626,10 +1507,7 @@ section.news .swiper-slide:nth-child(3n-1) {
 .banner {
     width: 100%;
     height: 100px;
-    display: flex;
-    flex-direction: row;
     position: relative;
-    justify-content: space-between;
     /* background: linear-gradient(to bottom, rgba(68, 52, 137, 0.12), rgba(68, 52, 137, 0.95)); */
     background: rgb(68, 52, 137);
 }
@@ -1650,7 +1528,7 @@ section.news .swiper-slide:nth-child(3n-1) {
 
 .banner h4 {
     padding: 15px 0 0;
-    margin: -24px 0 0px 2%;
+    /* margin: 0 0 0 2%; */
     font-size: 1.5rem;
     color: rgb(226, 226, 226);
     background: #010f1b;
@@ -1658,18 +1536,26 @@ section.news .swiper-slide:nth-child(3n-1) {
     height: 65px;
     text-align: center;
     z-index: 5;
+    /* position: absolute; */
+    float: left;
+    top: -53px;
+    left: 50px;
+    display: block;
 }
 
 .bt-wrap {
     width: 76%;
     height: 100px;
-    left: 250px;
-    margin: -45px 0 0 77px;
+    left: 350px;
+    top: -75px;
+    margin: 0 auto;
     background: #fff;
-    box-shadow: 0 3px 5px rgb(196, 196, 196);
+    box-shadow: 0 3px 5px rgba(0 0 0 / 30%);
     border-radius: 3px;
     position: absolute;
+    /* 앱솔 없애면 버튼 밖으로 나감 */
     z-index: 2;
+    /* align-items: center; */
 }
 
 .banner .swiper-container {
@@ -1679,43 +1565,45 @@ section.news .swiper-slide:nth-child(3n-1) {
 
 .banner .swiper-container .swiper-slide {
     height: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* overflow: hidden; */
-
 
 }
 
 .bt-wrap > .swiper-button-prev,
 .bt-wrap > .swiper-button-next {
-    width: 65px;
-    height: 65px;
     color: #7c12df;
     font-size: 1rem;
-    top: 41px;
 }
 
 footer {
+    width: 100%;
     height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
     font-size: 1.1rem;
     line-height: 1.8rem;
     color: #606060;
 }
-
-footer .web-logo {
-    flex-direction: row;
-    align-items: center;
+footer > span {
+    width: 30%;
+    position: absolute;
+    height: 45px;
+    /* margin-bottom: 70px; */
+    float: none;
+    margin: 0 0 0 41%;
+    text-align: center;
+}
+footer div {
+    width: 22%;
+    float: none;
+    top: 51px;
+    position: relative;
+    margin: 17px 0 0 43%;
+}
+footer .web-logo > span {
+   margin: 0 auto;
 
 }
-
 footer .web-logo > img {
     width: 50px;
-    /* height: 50px; */
+    height: 50px;
     object-fit: cover;
+    float: left;
 }

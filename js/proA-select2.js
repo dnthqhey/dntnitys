@@ -1,6 +1,6 @@
 //리사이징 할때마다 새로고침
 var lastWidth = $(window).width();
-$(window).resize(function () {
+$(window).resize(function() {
     if ($(window).width() != lastWidth) {
         location.reload();
         lastWidth = $(window).width();
@@ -9,14 +9,14 @@ $(window).resize(function () {
 });
 
 
-$(function () {
+$(function() {
     //-----------------------------모바일메뉴
     // 모바일메뉴 open/close
-    $(".mMenuBt").click(function () {
+    $(".mMenuBt").click(function() {
         $("nav").addClass("open");
         // nav에 open클래스 추가/삭제
     });
-    $(".mCloseBt").click(function () {
+    $(".mCloseBt").click(function() {
         $("nav").removeClass("open");
         // nav에 open클래스 추가/삭제
     });
@@ -24,7 +24,7 @@ $(function () {
         // 모바일용 아코디언 메뉴
         $(".mSnb").hide();
         // .mSnb를 숨기고 시작
-        $(".gnbMenu > .title").click(function () {
+        $(".gnbMenu > .title").click(function() {
             $(this).next().slideToggle(300);
             //this 다음 요소를 슬라이드다운
             $(".gnbMenu > .title").not(this).next().slideUp(300);
@@ -34,10 +34,10 @@ $(function () {
         });
     }
     //-----------------------------스크롤버튼
-    $(".scroll span").each(function () {
+    $(".scroll span").each(function() {
         var thisOffset = $("." + $(this).data('id')).offset().top;
 
-        $(this).click(function () {
+        $(this).click(function() {
             $("html, body").animate({
                 scrollTop: thisOffset
             }, 1000);
@@ -47,154 +47,102 @@ $(function () {
 
 
     // 팝업
-    $('.popbt').click(function () {
+    $('.popbt').click(function() {
         $('.popup').show();
     });
-    $('.popup >.close').click(function () {
+    $('.popup >.close').click(function() {
         $('.popup').hide();
     });
 
-    // 카운팅
-    function counting() {
-        $('.counting').each(function () {
-            var $this = $(this), //이름을 그냥 $this로 만들
-                countTo = $this.attr('data-count');
-            $({
-                countNum: $this.text()
-            }).animate({
-                countNum: countTo
-                //시작 숫자와 종료숫자를 비교한다
-            }, {
-                duration: 2000,
-                easing: 'linear',
-                //easing은 움직임효과로 swing과 linear를 적용할수 있다
-                step: function () {
-                    $this.text(Math.floor(this.countNum));
-                }, //Math.floor 정수만 가능 but 난 소수점있어..
-                complete: function () {
-                    $this.text(this.countNum);
-                }
-
-            });
-        });
-    }
-
-
-    // 소수점 카운팅
-    function counting2() {
-        $('.counting2').each(function () {
-            let $this = $(this),
-                countTo = $this.text();
-            // 속성값으로 소수점을 쓸 수 없어서 해당 태그에 텍스트로 원하는 수치 입력, 스크립트에서 변수로 받기
-            // 초기값 0을 여기서 미리설정하기
-            $({
-                countNum: 0
-            }).animate({
-                countNum: countTo
-            }, {
-                duration: 2000,
-                easing: 'linear',
-                step: function () {
-                    // 소수점아래 수 정리 메서드 .toFixed(n) 사용하기
-                    $this.text(this.countNum.toFixed(1));
-                },
-                complete: function () {
-                    $this.text(this.countNum.toFixed(1));
-                }
-            });
-        });
-    }
-    counting();
-    counting2();
 
     // 탭메뉴 가로형
-    $(".tab ul li").click(function () {
+    $(".tab ul li").click(function() {
         $(this).addClass('on')
             .siblings().removeClass('on');
         $("#" + $(this).data('id')).addClass('on')
             .siblings().removeClass('on');
     });
 });
+// 정수 카운팅
+function counting() {
+    $('.counting').each(function() {
+        var $this = $(this), //이름을 그냥 $this로 만듬
+            countTo = $this.attr('data-count');
+            //시작 숫자와 종료숫자를 비교한다
+        $({
+            countNum: $this.text()
+        }).animate({
+            countNum: countTo
+        }, {
+            duration: 2000,
+            easing: 'linear',
+            //easing은 움직임효과로 swing과 linear를 적용할수 있다
+            step: function() {
+                $this.text(Math.floor(this.countNum));
+            }, //Math.floor 정수만 가능 but 난 소수점있어..
+            complete: function() {
+                $this.text(this.countNum);
+            }
+        });
+    });
+    // 소수점 카운팅
+    $('.counting2').each(function() {
+        var $this = $(this),
+            countTo = $this.text();
+        // 속성값으로 소수점을 쓸 수 없어서 해당 태그에 텍스트로 원하는 수치 입력, 스크립트에서 변수로 받기
+        // 초기값 0을 여기서 미리설정하기
+        $({
+            countNum: 0
+        }).animate({
+            countNum: 1.5 // 소수리셋이 어려워서 고정값 적용
+            // countNum: countTo
+        }, {
+            duration: 1000,
+            easing: 'linear',
+            step: function() {
+                // 소수점아래 수 정리 메서드 .toFixed(n) 사용하기
+                $this.text(this.countNum.toFixed(1));
+            },
+            complete: function() {
+                $this.text(this.countNum.toFixed(1));
+            }
+        });
+    });
+}
+counting();
 
 //----------------------------섹션이동 시 리모콘에 하이라이트
-$(document).scroll(function () {
-
-    // 정수 카운팅
-    function counting() {
-        $('.counting').each(function () {
-            var $this = $(this), //이름을 그냥 $this로 만들
-                countTo = $this.attr('data-count');
-            $({
-                countNum: $this.text()
-            }).animate({
-                countNum: countTo
-                //시작 숫자와 종료숫자를 비교한다
-            }, {
-                duration: 2000,
-                easing: 'linear',
-                //easing은 움직임효과로 swing과 linear를 적용할수 있다
-                step: function () {
-                    $this.text(Math.floor(this.countNum));
-                }, //Math.floor 정수만 가능 but 난 소수점있어..
-                complete: function () {
-                    $this.text(this.countNum);
-                }
-
-            });
-        });
-    }
-
-
-    // 소수점 카운팅
-    function counting2() {
-        $('.counting2').each(function () {
-            let $this = $(this),
-                countTo = $this.text();
-            // 속성값으로 소수점을 쓸 수 없어서 해당 태그에 텍스트로 원하는 수치 입력, 스크립트에서 변수로 받기
-            // 초기값 0을 여기서 미리설정하기
-            $({
-                countNum: 0
-            }).animate({
-                countNum: countTo
-            }, {
-                duration: 2000,
-                easing: 'linear',
-                step: function () {
-                    // 소수점아래 수 정리 메서드 .toFixed(n) 사용하기
-                    $this.text(this.countNum.toFixed(1));
-                },
-                complete: function () {
-                    $this.text(this.countNum.toFixed(1));
-                }
-            });
-        });
-    }
-
+$(document).scroll(function() {
     var scrolltop = $(window).scrollTop();
-    $("section").each(function () {
+    $("section").each(function() {
         if (scrolltop >= $(this).offset().top) {
-            $("span[data-id=" + $(this).attr('id') + "]").addClass('on').siblings().removeClass('on');
-            $(this).addClass('on').siblings().removeClass('on'); //애니메이션 작동 section트리거 on이켜지도록
+            $("span[data-id=" + $(this).attr('class').split(' ')[0] + "]").addClass('on').siblings().removeClass('on');
+            $(this).addClass('on').siblings().removeClass('on');
+            
         } else if (scrolltop >= $(".section5").offset().top + 130) {
             $("span[data-id=footer]").addClass('on').siblings().removeClass('on');
         } else if (scrolltop <= $(".section1").offset().top - 50) { //비주얼에서는 불 안들어오게
             $(".visual").addClass('on').siblings().removeClass('on'); //비주얼에서 온이 켜지게 따로 써줌 리모콘에서 비주얼이 포함안되있으니까
-            $("span[data-id=section1]").removeClass('on');
-            counting();
-            counting2();
+            $("span[data-id=section1]").removeClass('on');         
         };
     });
+    //-----------------------------카운팅 트리거
+    if($(".visual").hasClass("on")){
+        counting();
+    }else{
+        $(".counting").text('0');
+    }
 });
 
 // AOS.init();
 AOS.init({
-    disable: function () {
+    disable: function() {
         var maxWidth = 641;
         return window.innerWidth < maxWidth;
     }
 });
-//모바일에서 AOS를 사용하고 싶지 않을때
 
+// 긴 글줄에서 n번째 라인의 말줄임표 지정하기
 new MultiClamp(document.querySelector('span.ellipsis'), {
     ellipsis: '...', //끝자리 붙을 모양
     clamp: 2 //줄 라인수 

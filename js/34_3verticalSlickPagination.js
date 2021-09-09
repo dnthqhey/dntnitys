@@ -59,4 +59,18 @@ $(function() {
         var rotateAngle = $(this).index() * 60 + 'deg';
         $(".slick-dots").css("transform", "rotate(" + rotateAngle + ")");
     });
-});
+    });
+
+    $(document).scroll(function() {
+        var scrolltop = $(window).scrollTop();
+        $(".vertical-slide").each(function() {
+            if (scrolltop >= $(this).offset().top-200) {
+                // $("span[data-id=" + $(this).attr('class').split(' ')[0] + "]").addClass('on').siblings().removeClass('on');
+                $(this).addClass('on').siblings().removeClass('on');
+               
+            } 
+            // else if (scrolltop >= $(".banner").offset().top + 130) {
+            //     $("span[data-id=footer]").addClass('on').siblings().removeClass('on');
+            // }
+        });
+    });

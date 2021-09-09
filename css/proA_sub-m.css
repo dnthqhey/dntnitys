@@ -216,7 +216,7 @@ header .inner .gnb .subgnball > ul > li > ul > li > ul > li {
 }
 
 .visual .b01 {
-    top: 85px;
+    top: 155px;
     margin: 0px auto 0px;
     text-align: center;
 }
@@ -259,8 +259,7 @@ header .inner .gnb .subgnball > ul > li > ul > li > ul > li {
 
 .visual .c01 {
     width: 90%;
-    /* top: 390px; */
-    top: 245px;
+    top: 390px;
     left: 0px;
     right: 1px;
     display: flex;
@@ -555,7 +554,7 @@ section.section2 .aniBox.top::before {
     color: #fff;
     transform: translate(17%, 34%);
     font-size: 1.5rem;
-    font-weight: 500px;
+    font-weight: 500;
     width: 290px;
     position: absolute;
 }

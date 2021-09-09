@@ -7,7 +7,6 @@
 /* font-awsome v5.10 */
 @import url('IEstyle/main-IEstyle.css');
 /* IE cross browsing */
-
 /* 프로젝트A pc ver. */
 
 @keyframes scrollmouse {
@@ -62,12 +61,13 @@
     padding: 0px;
     margin: 0px;
     text-decoration: none;
-    /* border: 1px solid rgb(243, 192, 22); */
+    /* border: 1px solid rgb(243, 192, 22);    */
 }
 
 :root {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 14px;
+    --swiper-pagination-color: #fff;
 }
 
 ul,
@@ -123,7 +123,8 @@ header .inner .logo {
     height: 55px;
     background: url("../cj_night-image/cjnight_logo.png") 0 0 no-repeat;
     background-size: cover;
-    display: block;
+    /* 로고가 잘리기만 햇던건 background이니까. 그러니까 
+    background-size: cover;해줘서 사이즈 조절하거나 이미지로 불러왔어야.. */
 }
 
 
@@ -132,10 +133,8 @@ header .inner .mMenuBt {
 }
 
 header .inner .gnb {
-    width: 900px;
+    width: 60%;
     height: 100%;
-   
-    
 }
 
 header .inner .gnb .mCloseBt {
@@ -145,6 +144,7 @@ header .inner .gnb .mCloseBt {
 header .inner .gnb > div {
     height: 100%;
     display: flex;
+    justify-content: center;
 
 }
 
@@ -174,12 +174,13 @@ header .inner .gnb .subgnball {
 }
 
 header .inner .gnb .subgnball > ul {
-    margin: 20px 0 0 797px;
+    margin: 20px 0 0 625px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: relative;
-    
+    width: 100%;
+
 }
 
 header .inner .gnb .subgnball > ul > li {
@@ -195,18 +196,17 @@ header .inner .gnb .subgnball > ul > li:last-child {
 
 header .inner .gnb .subgnball > ul > li > ul {
     width: 100%;
-    /* margin: 0 0 0 10%; */
+    margin: 0 0 0 10%;
 
 }
 
 header .inner .gnb .subgnball > ul > li > ul > li {
     min-height: 30px;
     line-height: 28px;
-    padding: 0 0 0 22px;
+    padding: 0 0 0 15px;
     /* 옆으로 20만큼 미는게 전반적으로 센터로 보임 */
     font-weight: 500;
-
-    /* 여기 이름이 저 상세하게 줬으니까 */
+    /* 여기 이름이 더 상세하게 줬으니까 */
     position: relative;
     /* 옆에 점찍혀있는 큰 타이틀들 */
 }
@@ -219,11 +219,12 @@ header .inner .gnb .subgnball > ul > li > ul > li {
     position: absolute;
 }
 
-header .inner .gnb .subgnball>ul>li>ul .mysub {
+header .inner .gnb .subgnball > ul > li > ul .mysub {
     height: 23px;
     background: #EFBA26;
     color: rgb(22, 33, 66);
 }
+
 /* 틀어진 첫번째문단에만 이름주고 정렬을 다시주었다 */
 /* header .inner .gnb .subgnball > ul > li.on .first * {
     padding: 0 35px 0 0; //위치가 안먹어서 padding조절
@@ -233,17 +234,20 @@ header .inner .gnb .subgnball > ul > li > ul > li > ul {
     /* margin: 0 5px 0 8px; */
     line-height: 1.3rem;
 }
+
 /* 서브페이지 만든곳만 */
-header .inner .gnb .subgnball>ul>li>ul>li>ul .second,
-header .inner .gnb .subgnball>ul>li>ul>li>ul>li {
+header .inner .gnb .subgnball > ul > li > ul > li > ul .second,
+header .inner .gnb .subgnball > ul > li > ul > li > ul > li {
     background: #a95cf1;
     color: rgb(219, 219, 219);
     cursor: pointer;
     min-height: 30px;
     line-height: 30px;
-    margin: 3px 0 0 10px;
+    margin: 3px 0 0 0;
 }
-
+header .inner .gnb .subgnball > ul > li > ul > li > ul > li:nth-child(2) {
+    color: rgb(219, 219, 219);
+}
 /* inner:hover일때 상단디자인 변경 및 .subgnball */
 header .inner::after {
     position: absolute;
@@ -390,10 +394,10 @@ header .inner:hover .gnb .subgnball {
 /* thumb 컨테이너 */
 .visual .thumbSlide5 {
     width: 48%;
-    height: 430px;
+    height: 400px;
     margin: 0;
     position: absolute;
-    bottom: 25px;
+    bottom: 120px;
     right: 50px;
     z-index: 100;
 }
@@ -402,6 +406,7 @@ header .inner:hover .gnb .subgnball {
     height: 380px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
+
 
 .visual .thumbSlide5 .swiper-slide.bg01 {
     background: url(../cj_night-image/main.jpg) center no-repeat;
@@ -443,17 +448,6 @@ header .inner:hover .gnb .subgnball {
     background: url(../cj_night-image/thumbnail09.jpg) center no-repeat;
     background-size: cover;
 }
-.visual .thumbSlide5 .swiper-pagination {
-    width: 60%;
-    height: 6px;
-    margin: 0 auto;
-    top: 400px;
-    left: 20%;
-    --swiper-pagination-color: rgb(255, 208, 1);
-
-}
-
-
 
 /* 스크롤마우스애니메이션 */
 .visual .scrollmouse {
@@ -462,14 +456,20 @@ header .inner:hover .gnb .subgnball {
     height: 63px;
     z-index: 100;
     animation: scrollmouse 1.5s infinite;
-    top: 998px;
+    top: 920px;
     position: absolute;
 }
+/* 
+.visual .thumbSlide5 .swiper-pagination{
+    position: absolute;
+    z-index: 100;
+    --swiper-pagination-color: #fff;
+} */
 
 /* 여기서부터 view */
 .view {
     width: 100%;
-    /* top: 100px; */
+    top: 100px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -484,8 +484,7 @@ header .inner:hover .gnb .subgnball {
     position: relative;
     overflow: hidden;
     background: url(../cj_night-image/배경무늬.png)0 0 no-repeat, #B9BABA;
-    background-size: cover;
-
+    background-size: cover;    
 }
 
 .rightt {
@@ -509,7 +508,7 @@ header .inner:hover .gnb .subgnball {
     width: 100%;
     height: 90vh;
     top: 0;
-    z-index: 3;
+    z-index: 1;
     position: absolute;
     display: none;
 }
@@ -645,8 +644,7 @@ header .inner:hover .gnb .subgnball {
 }
 
 .view .button {
-    width: 200px;
-    height: 35px;
+    padding: 10px 19px;
     position: absolute;
     bottom: 23px;
     background-color: #D6007F;
@@ -654,12 +652,9 @@ header .inner:hover .gnb .subgnball {
     border: none;
     cursor: pointer;
     font-size: 1.2rem;
-    line-height: 2.4rem;
     font-weight: 500;
-    text-align: center;
     z-index: 20;
-    margin: 0 auto;
-
+    right: 37%;
 }
 
 .view .button:hover {
@@ -672,7 +667,7 @@ header .inner:hover .gnb .subgnball {
 /* mobile back */
 .rightt::before {
     content: "";
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 90vh;
     top: 0;
@@ -856,7 +851,7 @@ section.video .content button {
     background: none;
     cursor: pointer;
     margin: 20px 0 0 0;
-
+   
 
 }
 
@@ -980,56 +975,54 @@ section.video i {
 section.course {
     width: 100%;
     height: 500px;
-    position: relative;
-   
+    /* padding: 70px 0; */
 }
 
 section.course .inner {
     width: 100%;
-    height: 100%;    
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
-section.course .inner > .box {
-    width: 50%;
-    height: 500px;
-    display: flex;
-    flex-direction: column;    
-    background-color: #162142;
 
+section.course h2 {
+    display: none;
 }
-section.course .box.left .title {
+section.course .left h3 {
     font-size: 1.7rem;
     line-height: 2rem;
     color: #fff;
+    margin: 67px 0px -56px 24px;
+}
+
+section.course .inner > .recommend {
+    width: 100%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin: 70px 0 0 0; */
+}
+
+.recommend > .box {
+    width: 50%;
+    height: 500px;
     position: relative;
-    top: 25px;
-    left: 40px;
-    width: 70%;
-}
-section.course .box.left .title h3 {
-    font-weight: 500;
-    margin-right: 5px;
+    background-color: #162142;
 
 }
-section.course .box.left .title h4 {
-    font-weight: 300;
-    font-size: 2.1rem;
-}
-
-
-section.course .inner .box .con {
+.recommend .box .con {
     width: 85%;
     display: flex;
     justify-content: space-between;
+    /* flex-wrap: wrap; */
+    /* top: 30px; */
     margin: 50px auto 10px;
     left: 10px;
     height: 170px;
 }
 
-section.course .inner .box .con > div {
+.recommend .box .con > div {
     background: url(../image/con1.png)50% 50% no-repeat;
     background-size: cover;
     width: 95px;
@@ -1042,18 +1035,18 @@ section.course .inner .box .con > div {
     cursor: pointer;
 }
 
-section.course .inner .box .con > div:hover::after {
-    content: "";
-    background-color: #D6007F;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    top: 0;
-    right: -17px;
-    position: absolute;
+.recommend .box .con > div:hover::after {
+   content: "";
+   background-color:#D6007F;
+   width: 20px;
+   height: 20px;
+   border-radius:50%;
+   top: 0;
+   right: -17px;
+   position: absolute;
 }
 
-section.course .inner .box .con > div:hover::before {
+.recommend .box .con > div:hover::before {
     content: "";
     background-color: #4d0669;
     width: 97px;
@@ -1062,42 +1055,39 @@ section.course .inner .box .con > div:hover::before {
     z-index: -1;
     left: 0;
     position: absolute;
-}
+ }
 
-section.course .inner .box .con > div:nth-of-type(3)::before,
-section.course .inner .box .con > div:nth-of-type(4)::before {
+ .recommend .box .con > div:nth-of-type(3)::before,
+ .recommend .box .con > div:nth-of-type(4)::before {
     content: "";
-    width: 76px;
-}
-section.course .inner .box .con > div:nth-of-type(5)::before {
+   width: 76px;
+ }
+ .recommend .box .con > div:nth-of-type(5)::before {
     content: "";
-    width: 104px;
-}
+   width: 104px;
+ }
 
-section.course .inner .box .con > div:nth-of-type(2) {
-    background: url(../image/con2.png)50% 50% no-repeat;
-    ;
+.recommend .box .con > div:nth-of-type(2) {
+    background: url(../image/con2.png)50% 50% no-repeat;;
     background-size: contain;
     transform: translate(0px, 50px);
 }
-section.course .inner .box .con > div:nth-of-type(3) {
-    background: url(../image/con3.png)50% 50% no-repeat;
-    ;
+.recommend .box .con > div:nth-of-type(3) {
+    background: url(../image/con3.png)50% 50% no-repeat;;
     background-size: contain;
     transform: translate(0px, 50px);
     text-indent: -21px;
 }
-section.course .inner  .box .con > div:nth-of-type(4) {
-    background: url(../image/con4.png)50% 50% no-repeat;
-    ;
+.recommend .box .con > div:nth-of-type(4) {
+    background: url(../image/con4.png)50% 50% no-repeat;;
     background-size: contain;
     width: 66px;
-    height: 80px;
+    height:80px;
     text-indent: 5px;
     transform: translate(0px, 50px);
 }
-section.course .inner .box .con > div:nth-of-type(5) {
-    background: url(../image/con6.png)50% 50% no-repeat;
+.recommend .box .con > div:nth-of-type(5) {
+    background: url(../image/con7.png)50% 50% no-repeat;;
     background-size: contain;
     transform: translate(0px, 50px);
     text-indent: -13px;
@@ -1105,89 +1095,87 @@ section.course .inner .box .con > div:nth-of-type(5) {
 
 
 /* -------공지사항 보도자료 swipe --------- */
-section.course .inner .swiper-container {
+.recommend .swiper-container {
     width: 100%;
     background-color: #162142;
     /* height: 100%; */
 }
 
-section.course .inner .art3 {
+.recommend .art3 {
     width: 100%;
     height: 60px;
     margin: 70px 0 0 0;
     border-top: 1px solid rgb(109, 109, 109);
     border-bottom: 1px solid rgb(109, 109, 109);
 }
-section.course .inner .art3 .swiper-slide {
+.recommend .art3 .swiper-slide {
     display: flex;
     align-items: center;
 }
-section.course .inner .art3 .swiper-slide span {
+.recommend .art3 .swiper-slide span {
     height: 78px;
     line-height: 78px;
 }
-section.course .inner .art3 .swiper-slide span.g1 {
+.recommend .art3 .swiper-slide span.g1 {
     color: #D6007F;
     margin: 0 20px 0;
     font-weight: 600;
     font-size: 1.2rem;
 }
-section.course .inner .art3 .swiper-slide span.g2,
-section.course .inner .art3 .swiper-slide span.g3 {
+.recommend .art3 .swiper-slide span.g2,
+.recommend .art3 .swiper-slide span.g3 {
     color: rgb(199, 199, 199);
     margin: 0 10px 0 10px;
 }
-section.course .inner .art3 .swiper-slide span.g3,
-section.course .inner .art4 .swiper-slide span.g3 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 
-section.course .inner .art4 {
+.recommend .art4 {
     width: 100%;
     height: 60px;
     margin: 20px 0 0 0;
     border-top: 1px solid rgb(109, 109, 109);
     border-bottom: 1px solid rgb(109, 109, 109);
 }
-section.course .inner .art4 .swiper-slide {
+.recommend .art4 .swiper-slide {
     display: flex;
     align-items: center;
 }
-section.course .inner .art4 .swiper-slide span {
+.recommend .art4 .swiper-slide span {
     height: 78px;
     line-height: 78px;
 }
-section.course .inner .art4 .swiper-slide span.g1 {
+.recommend .art4 .swiper-slide span.g1 {
     color: #D6007F;
     margin: 0 20px 0;
     font-weight: 600;
     font-size: 1.2rem;
 }
-section.course .inner .art4 .swiper-slide span.g2,
-section.course .inner .art4 .swiper-slide span.g3 {
+.recommend .art4 .swiper-slide span.g2,
+.recommend .art4 .swiper-slide span.g3 {
     color: rgb(199, 199, 199);
     margin: 0 10px 0 10px;
 }
 /* 폼요소  */
-.course .inner .box.right {
+.course .inner .right {
     background: url(../image/pattern.png) 50% 50% no-repeat;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    background-size: cover;
+    position: relative;
 }
 
-.course .box.right h3 {
+.course .right h3 {
     background: #162142;
-    width: 110px;
-    height: 165px;
+    width: 120px;
+    height: 120px;
     display: flex;
     color: #FFF;
     font-size: 1.7rem;
-    line-height: 2.2rem;
+    line-height: 2.5rem;
     justify-content: center;
-    padding-top: 15px;
-    top: 0;
-    left: 40px;
-    position: relative;    
+    padding: 20px;
+    margin: 0 0 0 51px;
 }
 
 /* ------------------------------------------ */
@@ -1321,8 +1309,10 @@ section.course .inner .art4 .swiper-slide span.g3 {
 form .bt {
     color: #fff;
     font-weight: 400;
+    /* 그라데이션 */
     background: linear-gradient(to right, #a95cf1, #7c12df);
     border: 0px solid;
+    /* border-radius: 8px; */
     font-weight: 700;
 }
 
@@ -1335,40 +1325,17 @@ form .bt:hover {
 }
 /* 접수완료 */
 .course .inner .right .popup {
-    width: 350px;
-    height: 173px;
-    position: absolute;
-    padding: 0 15px;
-    top: 60px;
-    color: #999;
-    left: 35%;
-    background-color: rgba(26, 26, 26,0.8);
+    width: 269px;
+    height: 50px;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    background-color: #fff;
+    position: relative;
+    border-radius: 15px;
     box-shadow: 0 3px 5px rgb(0 0 0 / 30%);
     display: none;
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.5rem;
-   
 }
-
-.course .inner .right .popup >span:nth-of-type(1){
-    font-size: 1.5rem;
-    line-height: 5rem;
-    font-weight: 400;
-    color: #fff;
-}
-
-
-.course .inner .right .popup > span:nth-of-type(1)::before{
-    width: 300px;
-    height: 1px;
-    top: 64px;
-    background-color: #999;
-    content: "";
-    margin: 0 0 0 -45px;
-    position: absolute;
-}
-
 
 .course .inner .right .popup .close {
     width: 20px;
@@ -1376,13 +1343,13 @@ form .bt:hover {
     line-height: 1rem;
     text-align: center;
     position: absolute;
-    top: 11px;
-    right: 12px;
+    top: 5px;
+    right: 9px;
     color: #fff;
     font-size: 1rem;
     background-color: rgb(240, 14, 228);
     border-radius: 50%;
-    cursor: pointer;
+    display: none;
 }
 
 
@@ -1564,6 +1531,8 @@ section.news .swiper-slide:nth-child(3n-1) {
     padding: 20px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+
+
 }
 
 .mySwiper4 .swiper-slide:nth-child(even) .text {
@@ -1602,18 +1571,15 @@ section.news .swiper-slide:nth-child(3n-1) {
     color: #fff;
     padding: 0 6px 0 0;
     z-index: 3;
-   
+
 }
 
 .news .swiper-button-next {
     padding: 0 0 0 6px;
-   
 }
 
-.swiper-button-next::after,
-.swiper-container-rtl .swiper-button-prev::after {
+.swiper-button-next::after, .swiper-container-rtl .swiper-button-prev::after {
     content: 'next';
-    
 }
 
 
@@ -1625,7 +1591,7 @@ section.news .swiper-slide:nth-child(3n-1) {
 
 .banner {
     width: 100%;
-    height: 100px;
+    height: 320px;
     display: flex;
     flex-direction: row;
     position: relative;
@@ -1650,7 +1616,7 @@ section.news .swiper-slide:nth-child(3n-1) {
 
 .banner h4 {
     padding: 15px 0 0;
-    margin: -24px 0 0px 2%;
+    margin: 0 0 0 2%;
     font-size: 1.5rem;
     color: rgb(226, 226, 226);
     background: #010f1b;
@@ -1664,12 +1630,14 @@ section.news .swiper-slide:nth-child(3n-1) {
     width: 76%;
     height: 100px;
     left: 250px;
-    margin: -45px 0 0 77px;
+    margin: -18px 0 0 77px;
     background: #fff;
-    box-shadow: 0 3px 5px rgb(196, 196, 196);
+    box-shadow: 0 3px 5px rgba(0 0 0 / 30%);
     border-radius: 3px;
     position: absolute;
+    /* 앱솔 없애면 버튼 밖으로 나감 */
     z-index: 2;
+    align-items: center;
 }
 
 .banner .swiper-container {
@@ -1689,14 +1657,11 @@ section.news .swiper-slide:nth-child(3n-1) {
 
 .bt-wrap > .swiper-button-prev,
 .bt-wrap > .swiper-button-next {
-    width: 65px;
-    height: 65px;
     color: #7c12df;
     font-size: 1rem;
-    top: 41px;
 }
 
-footer {
+.banner .footer {
     height: 180px;
     display: flex;
     align-items: center;
@@ -1708,13 +1673,13 @@ footer {
     color: #606060;
 }
 
-footer .web-logo {
+.banner .web-logo {
     flex-direction: row;
     align-items: center;
 
 }
 
-footer .web-logo > img {
+.banner .web-logo > img {
     width: 50px;
     /* height: 50px; */
     object-fit: cover;

@@ -160,17 +160,16 @@ header .inner .gnb .subgnball > ul > li.on .first * {
     color: rgb(39 26 80);
 }
 /* 서브페이지 만든곳만 */
-header .inner .gnb .subgnball > ul > li > ul > li > ul .second,
+/* header .inner .gnb .subgnball > ul > li > ul > li > ul .second,
 header .inner .gnb .subgnball > ul > li > ul > li > ul > li {
-    color: #D6007F;
-    cursor: pointer;
-    /* margin: 0 -5px 0 -8px; */
-}
+   cursor: pointer;
+    /* margin: 0 -5px 0 -8px; }*/
+
 
 /* 비주얼부터 */
 
 .visual {
-    height: 550px;
+    height: 650px;
 
 }
 
@@ -189,7 +188,10 @@ header .inner .gnb .subgnball > ul > li > ul > li > ul > li {
     font-size: 1.6rem;
 }
 
-
+/* main slide */
+.visual .mainSlide5 {
+    height: 650px;
+}
 /* --------------------------------------------------------------------- */
 /* thumb 컨테이너 */
 .visual .thumbSlide5 {
@@ -227,18 +229,128 @@ header .inner .gnb .subgnball > ul > li > ul > li > ul > li {
     margin: 0 auto;
 }
 
-.visual .thumbSlide5 .swiper-pagination{
+.visual .thumbSlide5 .swiper-pagination {
     width: 60%;
     height: 4px;
     margin: 0 auto;
-    top: 300px;
+    top: 295px;
     left: 20%;
 }
-/* ------------------------------- */
-/* section.video {
-    height: auto;
-    } */
 
+
+/* 여기서부터 view */
+.view {
+    width: 100%;
+    top: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+.leftt {
+    width: 100%;
+    height: 650px;
+    display: block;
+}
+.rightt {
+    width: 100%;
+    height: 650px;
+    display: block;
+}
+
+.leftt::before,
+.rightt::before {
+    display: block;
+    height: 650px;
+}
+.leftt h2::before,
+.rightt h2::before {
+    top: -13px;
+    left: -9px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    content: "";
+}
+
+.leftt .c01,
+.rightt .c01 {
+    width: 90%;
+    /* top: 390px; */
+    top: 245px;
+    left: 0px;
+    right: 1px;
+    display: flex;
+    color: rgb(221, 221, 221);
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    font-size: 1.6rem;
+    text-align: center;
+}
+.leftt h2,
+.rightt h2 {
+    font-size: 1.6rem;
+    top: 85px;
+
+}
+.leftt h3,
+.rightt h3 {
+    width: 100%;
+    margin: -20px 0 0px 0;
+    font-size: 1.1rem;
+}
+
+.leftt .c01 > .info,
+.rightt .c01 > .info {
+    width: 33%;
+    /* margin-left: 15px; */
+}
+
+.leftt .c01 > .info > span,
+.rightt .c01 > .info > span {
+    width: 100%;
+    font-size: 1rem;
+
+}
+.leftt .c01 > .info > span:nth-child(1),
+.rightt .c01 > .info > span:nth-child(1) {
+    font-size: 2rem;
+}
+
+.leftt .c01 > .info > span:nth-child(2),
+.rightt .c01 > .info > span:nth-child(2) {
+    line-height: 1.4rem;
+}
+.leftt .button,
+.rightt .button {
+    left: 20%;
+    right: 20%;
+    font-size: 1rem;
+}
+.leftt .wrap > div,
+.rightt .wrap > div {
+    display: none;
+}
+.leftt .wrap {
+    top: 69px;
+    height: 540px;
+}
+
+.rightt .wrap {
+    left: -154px;
+}
+
+
+
+
+
+/* ------------------------------- */
+section.video {
+    margin: 250px auto 150px;
+
+}
 section.video .inner {
     width: 100%;
     margin: 0 auto;
@@ -283,46 +395,44 @@ section.course {
     width: 100%;
     height: auto;
     /* flex-direction: column; */
-
 }
 
 section.course .inner > .recommend {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: none;
+    justify-content: unset;
 }
+
+.recommend .box .con {
+    flex-wrap: wrap;
+}
+
+.recommend .box .con > div {
+    width: 86px;
+    height: 71px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.recommend .box .con > div:hover::after {
+    width: 12px;
+    height: 12px;
+    right: 5px;
+}
+
 .recommend > .box {
     width: 100%;
     flex-direction: column;
 }
 
-section.course .inner .c01,
-section.course .inner .c02 {
-    margin: 0 auto 100px;
-    z-index: 2;
-    /* text-align: center; */
+section.course .left h3 {
+  margin: 57px 0px -56px 24px;
 }
-/* 코스 슬라이드 모바일에서만 희미하게*/
-.recommend .swiper-slide:nth-child(1)::after,
-.recommend .swiper-slide:nth-child(2)::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: hsl(223, 46%, 22%);
-    opacity: 70%;
-    content: "";
-    z-index: 1;
-}
-
 .course .inner .right .c03 {
     /* justify-content: center; */
     margin: 30px auto 0;
 }
-
-
 .course .inner .right .c03 > form {
     flex-direction: column;
     align-items: flex-end;

@@ -6,6 +6,8 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 /* Material Icons */
 @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import url('IEstyle/sub1-IEstyle.css');
+/* IE cross browsing */
 
 /* font-awsome v5.10 */
 /* 프로젝트A pc 추천코스 서브페이지*/
@@ -30,7 +32,7 @@
 
 }
 
-@keyframes scale {
+@keyframes colorchange {
     0% {
         background: rgb(206, 206, 206);
     }
@@ -71,7 +73,7 @@
     padding: 0px;
     margin: 0px;
     text-decoration: none;
-    /* border: 1px solid rgb(240, 206, 161); */
+    border: 1px solid rgb(240, 206, 161);
 }
 
 :root {
@@ -146,6 +148,8 @@ header .inner .mMenuBt {
 header .inner .gnb {
     width: 900px;
     height: 100%;
+   
+    
 }
 
 header .inner .gnb .mCloseBt {
@@ -155,7 +159,6 @@ header .inner .gnb .mCloseBt {
 header .inner .gnb > div {
     height: 100%;
     display: flex;
-    justify-content: center;
 
 }
 
@@ -185,13 +188,12 @@ header .inner .gnb .subgnball {
 }
 
 header .inner .gnb .subgnball > ul {
-    margin: 20px 0 0 625px;
+    margin: 20px 0 0 797px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: relative;
-    width: 100%;
-
+    
 }
 
 header .inner .gnb .subgnball > ul > li {
@@ -207,14 +209,14 @@ header .inner .gnb .subgnball > ul > li:last-child {
 
 header .inner .gnb .subgnball > ul > li > ul {
     width: 100%;
-    margin: 0 0 0 10%;
+    /* margin: 0 0 0 10%; */
 
 }
 
 header .inner .gnb .subgnball > ul > li > ul > li {
     min-height: 30px;
     line-height: 28px;
-    padding: 0 0 0 15px;
+    padding: 0 0 0 22px;
     /* 옆으로 20만큼 미는게 전반적으로 센터로 보임 */
     font-weight: 500;
 
@@ -417,19 +419,19 @@ header .inner:hover .gnb .subgnball {
     justify-content: center;
     position: relative;
     overflow: hidden;
-}
-/* mobile back */
-.visual::after {
-    content: "";
     background: url(../cj_night-image/배경무늬.png)0 0 no-repeat, #B9BABA;
     background-size: cover;
+}
+/* mobile back */
+/* .visual::after {
+    content: "";
     width: 100%;
     height: 90vh;
     top: 0;
     z-index: -1;
     position: absolute;
     
-}
+} */
 .visual::before{
     content: "";
     background-color: rgba(0, 0, 0, 0.6);
@@ -447,7 +449,7 @@ header .inner:hover .gnb .subgnball {
 
 
 .visual .b01 {
-    margin: 0px 950px 410px 0;
+    margin: 0px 1220px 410px 0;
     font-size: 1.5rem;
     position: absolute;
     color: #fff;
@@ -525,7 +527,7 @@ header .inner:hover .gnb .subgnball {
 
 }
 .visual.on .wrap > div {
-    animation: scale 2s;
+    animation: colorchange 2s;
     animation-fill-mode: forwards;
 }
 
@@ -897,7 +899,8 @@ section.section2 .aniBox.top::before {
     height: 614px;
     position: absolute;
     z-index: -1;
-    transform: translate(484px, -146px);
+    top: 87px;
+    left: 484px;
     opacity: 0.6;
 }
 
@@ -933,7 +936,7 @@ section.section2 .aniBox.top::before {
         height: 350px;
         /* display: flex;
         justify-content: flex-start; */
-        background: url(../cj_night-image/충북문화관단색.jpg)0% 0% no-repeat;
+        background: url(../cj_night-image/충북문화관단색.jpg)0% 39% no-repeat;
         background-size: cover;
         position: relative;
         left: 0;
@@ -994,7 +997,7 @@ section.section2 .aniBox.top::before {
     color: #fff;
     transform: translate(33%, 23%);
     font-size: 2.3rem;
-    font-weight: 500px;
+    font-weight: 500;
     width: 290px;
     position: absolute;
 }
@@ -1003,13 +1006,13 @@ section.section2 .aniBox.top::before {
     color: #e40f8f;
     font-size: 2rem;
     padding: 0 10px 0 0;
-    font-weight: 500px
+    font-weight: 500;
 }
 
 .section3 .history ul > li > span:last-child {
     color: #999;
     font-size: 1.1rem;
-    font-weight: 200px;
+    font-weight: 200;
 }
 
 .section3 .writer {

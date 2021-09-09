@@ -8,8 +8,8 @@ new Swiper(".thumbSlide5", {
             spaceBetween: 5,
         },
         1024: {
-            slidesPerView: 3,
-            spaceBetween: 5,
+            slidesPerView: 4,
+            spaceBetween: 10,
         },
     },
     autoplay: {
@@ -47,15 +47,6 @@ new Swiper(".mainSlide5", {
     allowTouchMove: false
 });
 
-
-var swiper3 = new Swiper(".mySwiper3", {
-    spaceBetween: 30,
-    pagination: { // 페이징 설정
-        el: ".swiper-pagination",
-        clickable: true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
-    },
-});
-
 var swiper4 = new Swiper(".mySwiper4", {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -87,9 +78,9 @@ var swiper4 = new Swiper(".mySwiper4", {
 
 
 var swiper5 = new Swiper(".mySwiper5", {
-   slidesPerView: 1,
+    slidesPerView: 1,
     spaceBetween: 20,
-    
+
     navigation: {
         nextEl: ".a.swiper-button-next",
         prevEl: ".a.swiper-button-prev",
@@ -98,12 +89,12 @@ var swiper5 = new Swiper(".mySwiper5", {
         640: {
             slidesPerView: 3,
             spaceBetween: 20,
-          
+
         },
         1024: {
             slidesPerView: 4,
             spaceBetween: 20,
-          
+
         },
     },
     autoplay: {
@@ -111,11 +102,23 @@ var swiper5 = new Swiper(".mySwiper5", {
         disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
     },
     freeMode: {
-      enabled: true,
-  },
+        enabled: true,
+    },
 });
 
- //----------------------------카운팅
+new Swiper('.swiper-container.swipe2', { 
+    autoplay: {delay: 2000},
+    loop: true,
+    direction: 'vertical',
+});
+// new Swiper('.swiper-container.swipe3', { 
+//     autoplay: {delay: 2000},
+//     loop: true,
+//     direction: 'vertical',
+// });
+
+
+//----------------------------카운팅
 function counting() {
     // 정수카운팅
     $('.counting').each(function() {
@@ -140,23 +143,46 @@ function counting() {
     // 소수점 카운팅
     $('.counting2').each(function() {
         var $this = $(this);
-            // countTo = $this.text();
+        // countTo = $this.text();
         // 속성값으로 소수점을 쓸 수 없어서 해당 태그에 텍스트로 원하는 수치 입력, 스크립트에서 변수로 받기
         // 초기값 0을 여기서 미리설정하기
         $({
             countNum: 0
         }).animate({
-            countNum:2.5 // 소수리셋이 어려워서 고정값 적용
+            countNum: 2.5 // 소수리셋이 어려워서 고정값 적용
             // countNum: countTo
         }, {
             duration: 1000,
             easing: 'linear',
             step: function() {
                 // 소수점아래 수 정리 메서드 .toFixed(n) 사용하기
-                $this.text(this.countNum.toFixed(3));
+                $this.text(this.countNum.toFixed(1));
             },
             complete: function() {
-                $this.text(this.countNum.toFixed(3));
+                $this.text(this.countNum.toFixed(1));
+            }
+        });
+    });
+      // 소수점 카운팅 3
+      $('.counting3').each(function() {
+        var $this = $(this);
+        // countTo = $this.text();
+        // 속성값으로 소수점을 쓸 수 없어서 해당 태그에 텍스트로 원하는 수치 입력, 스크립트에서 변수로 받기
+        // 초기값 0을 여기서 미리설정하기
+        $({
+            countNum: 0
+        }).animate({
+            countNum: 1.5 // 소수리셋이 어려워서 고정값 적용
+            // countNum: countTo
+        }, {
+            duration: 1000,
+            easing: 'linear',
+            step: function() {
+                // 소수점아래 수 정리 메서드 .toFixed(n) 사용하기
+                $this.text(this.countNum.toFixed(1));
+            },
+            complete: function() {
+                $this.text(this.countNum.toFixed(1));
             }
         });
     });
@@ -171,23 +197,46 @@ function counting() {
 //----------------------------섹션이동 시 리모콘에 하이라이트
 $(document).scroll(function() {
     var scrolltop = $(window).scrollTop();
-    $("header, section, footer").each(function() {
-        if (scrolltop >= $(this).offset().top) {
-            $("span[data-id=" + $(this).attr('class').split(' ')[0] + "]").addClass('on').siblings().removeClass('on');
+    $("section").each(function() {
+        if (scrolltop >= $(this).offset().top-200) {
+            // $("span[data-id=" + $(this).attr('class').split(' ')[0] + "]").addClass('on').siblings().removeClass('on');
             $(this).addClass('on').siblings().removeClass('on');
-            
-        } else if (scrolltop >= $(".section6").offset().top + 50) {
-            $("span[data-id=footer]").addClass('on').siblings().removeClass('on');
-        }
+           
+        } 
+        // else if (scrolltop >= $(".banner").offset().top + 130) {
+        //     $("span[data-id=footer]").addClass('on').siblings().removeClass('on');
+        // }
     });
     //-----------------------------카운팅 트리거
-    if(scrolltop >= $("section1").offset().top -50) {
-        $("span[data-id=footer]").addClass('on').siblings().removeClass('on');
-    }
-    
-    if($(".section1").hasClass("on")){
+    if ($(".visual").hasClass("on")) {
         counting();
-    }else{
+    } else {
         $(".counting").text('0');
     }
+});
+
+// window.onload = function() {
+//     var bt = document.getElementById('bt');
+//    // html에서 id="bt"를 쓰고 있는 객체를 찾아서 변수 bt에 선언한다.
+//     bt.onclick = function(event) {
+//         alert('접수되었습니다');
+//         alert('본 버튼은 포트플리오용 접수버튼으로 제작되었으며 실제 접수가 된 것은 아닙니다.');
+//         return false
+//     };
+// };
+$(function() {
+     // jQueryUI draggable
+    $(".popup").draggable();
+
+    $('.bt').click(function() {
+        $('.popup').show();
+    });
+
+    //닫기버튼  
+    $('.popup >.close').click(function() {
+        // $('.popup').hide();
+        $('.popup').css('display', 'none');
+    });
+    
+   
 });

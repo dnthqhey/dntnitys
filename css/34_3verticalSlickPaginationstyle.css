@@ -463,7 +463,6 @@ header .inner:hover .gnb .subgnball {
     height: 100vh;
     top: -90px;
     left: 0px;
-
 }
 
 .vertical-slide.s03 .light>div {
@@ -476,12 +475,12 @@ header .inner:hover .gnb .subgnball {
     left: 280px;
 }
 
-.vertical-slide.s03 .light>div {
+.vertical-slide.s03.on .light>div {
     animation: blink-effect 1s step-end;
     animation-iteration-count: 3;
 }
 
-.vertical-slide.s03 .light div:nth-of-type(1) {
+.vertical-slide.s03.on .light div:nth-of-type(1) {
     animation: blink-effect 1s step-start;
 }
 
@@ -493,7 +492,7 @@ header .inner:hover .gnb .subgnball {
 
 }
 
-.vertical-slide.s03 .light>div:nth-of-type(3) {
+.vertical-slide.s03.on .light>div:nth-of-type(3) {
     background: url(../image/light/light3.png)0 0 no-repeat;
     top: 707px;
     left: 110px;
@@ -514,28 +513,28 @@ header .inner:hover .gnb .subgnball {
     animation-delay: .8s;
 }
 
-.vertical-slide.s03 .light>div:nth-of-type(6) {
+.vertical-slide.s03.on .light>div:nth-of-type(6) {
     background: url(../image/light/light6.png)0 0 no-repeat;
     top: 421px;
     left: 930px;
     animation-delay: .4s;
 }
 
-.vertical-slide.s03 .light>div:nth-of-type(7) {
+.vertical-slide.s03.on .light>div:nth-of-type(7) {
     background: url(../image/light/light7.png)0 0 no-repeat;
     top: 303px;
     left: 1190px;
     animation-delay: 1s;
 }
 
-.vertical-slide.s03 .light>div:nth-of-type(8) {
+.vertical-slide.s03.on .light>div:nth-of-type(8) {
     background: url(../image/light/light8.png)0 0 no-repeat;
     top: 324px;
     left: 1290px;
     animation-delay: .8s;
 }
 
-.vertical-slide.s03.light>div:nth-of-type(9) {
+.vertical-slide.s03.on .light>div:nth-of-type(9) {
     background: url(../image/light/light9.png)0 0 no-repeat;
     top: 103px;
     left: 1320px;

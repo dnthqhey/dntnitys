@@ -63,16 +63,16 @@ $(function() {
             .siblings().removeClass('on');
     });
 });
-// 카운팅
+// 정수 카운팅
 function counting() {
     $('.counting').each(function() {
-        var $this = $(this), //이름을 그냥 $this로 만들
+        var $this = $(this), //이름을 그냥 $this로 만듬
             countTo = $this.attr('data-count');
+            //시작 숫자와 종료숫자를 비교한다
         $({
             countNum: $this.text()
         }).animate({
             countNum: countTo
-            //시작 숫자와 종료숫자를 비교한다
         }, {
             duration: 2000,
             easing: 'linear',
@@ -83,11 +83,10 @@ function counting() {
             complete: function() {
                 $this.text(this.countNum);
             }
-
         });
     });
     // 소수점 카운팅
-    $('.countingFixed').each(function() {
+    $('.counting2').each(function() {
         var $this = $(this),
             countTo = $this.text();
         // 속성값으로 소수점을 쓸 수 없어서 해당 태그에 텍스트로 원하는 수치 입력, 스크립트에서 변수로 받기
@@ -95,7 +94,8 @@ function counting() {
         $({
             countNum: 0
         }).animate({
-            countNum: countTo
+            countNum: 2.5 // 소수리셋이 어려워서 고정값 적용
+            // countNum: countTo
         }, {
             duration: 1000,
             easing: 'linear',
@@ -113,17 +113,12 @@ counting();
 
 //----------------------------섹션이동 시 리모콘에 하이라이트
 $(document).scroll(function() {
-    // 카운팅
-
-    counting();
-
-
-
     var scrolltop = $(window).scrollTop();
     $("section").each(function() {
         if (scrolltop >= $(this).offset().top) {
-            $("span[data-id=" + $(this).attr('id') + "]").addClass('on').siblings().removeClass('on');
-            $(this).addClass('on').siblings().removeClass('on'); //애니메이션 작동 section트리거 on이켜지도록
+            $("span[data-id=" + $(this).attr('class').split(' ')[0] + "]").addClass('on').siblings().removeClass('on');
+            $(this).addClass('on').siblings().removeClass('on');
+            
         } else if (scrolltop >= $(".section5").offset().top + 130) {
             $("span[data-id=footer]").addClass('on').siblings().removeClass('on');
         } else if (scrolltop <= $(".section1").offset().top - 50) { //비주얼에서는 불 안들어오게
@@ -131,7 +126,16 @@ $(document).scroll(function() {
             $("span[data-id=section1]").removeClass('on');         
         };
     });
+    //-----------------------------카운팅 트리거
+    if($(".visual").hasClass("on")){
+        counting();
+    }else{
+        $(".counting").text('0');
+    }
 });
+
+
+
 // 향교슬라이드
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
