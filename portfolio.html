@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>indego</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="portfolio/css/포폴.css">
+</head>
+
+<body>
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide mod">
+                <span>Web Designer | Publisher<span> Portfoilo</span></span>
+                <div>2021. 09. ver.1</div>
+                <div class="font">level1?</div>
+                <div class="crescendo"></div>
+                <span class="intro">편집7년의 경험과 기반을 <span>UI UX디자인</span>으로 치환하다</span>
+                <div class="tri"></div>
+                <div class="big2">
+                    <div class="rightbox1">
+                        <div class="bfont1">
+                            <p>social experience</p>
+                            <p>skill</p>
+                            <p>potential</p>
+                        </div>
+                        <div class="wrap">
+                            <div class="progress-bar">
+                                <div class="bar"></div>
+                                <div class="rate a" data-rate="70"></div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="bar"></div>
+                                <div class="rate b" data-rate="75"></div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="bar"></div>
+                                <div class="rate c" data-rate="80"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide sec1">
+
+            </div>
+
+            <div class="swiper-slide sec2">
+                <a class="btn" href="A/index.html"></a>
+            </div>
+
+            <div class="swiper-slide sec3">
+               <!-- <a href="A/html/proA-sub1.html" class="second"></a>
+                <a href="A/html/proA-sub2.html" class="second"></a> -->
+            </div>
+            <div class="swiper-slide sec4">
+
+            </div>
+            <div class="swiper-slide sec5">
+
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        var progressWarp = $('.progress-bar'),
+            progressBar = progressWarp.find('.bar'),
+            progressText = progressWarp.find('.rate'),
+            progressRate = progressText.attr('data-rate');
+
+        console.log(progressRate);
+
+        progressBar.animate({
+            width: progressRate + '%'
+        }, 2500)
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="portfolio/js/jquery.animateNumber.min.js"></script>
+    <script src="portfolio/js/indego.js"></script>
+</body>
+
+</html>

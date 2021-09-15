@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>34_3verticalSlickPagination</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <link rel="stylesheet" href="../css/34_3verticalSlickPaginationstyle.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <a class="logo" href="../index.html"></a>
+            <span class="fas fa-bars mMenuBt"></span>
+            <div class="gnb">
+                <span class="fas fa-times mCloseBt"></span>
+                <div>
+                    <span class="on" data-id="snb01">행사소개</span>
+                    <span data-id="snb02">프로그램</span>
+                    <span data-id="snb03">야행코스</span>
+                    <span data-id="snb04">참여문화유산</span>
+                    <span data-id="snb05">오시는길</span>
+                </div>
+                <div class="subgnball">
+                    <ul>
+                        <li class="on" id="snb01">
+                            <ul>
+                                <li class="first">
+                                    2021청주문화재야행</li>
+                                <li>발자취</li>
+                                <li>행사소식</li>
+                                <li>청주문화재야행 갤러리</li>
+                                <li>팀메이트</li>
+                            </ul>
+                        </li>
+                        <li id="snb02">
+                            <ul>
+                                <li>전체프로그램</li>
+                                <li>야행프롤로그</li>
+                                <li>체험프로그램</li>
+                                <li>공연 전시프로그램</li>
+                                <li>스탬프x미션투어</li>
+                                <li>TV방송</li>
+                                <li>퀴즈 및 이벤트</li>
+                                <li>사전신청</li>
+                                <li>신청내용 조회</li>
+                                <li>환불신청</li>
+                                <li>시민아이디어공모</li>
+                            </ul>
+                        </li>
+                        <li id="snb03">
+                            <ul>
+                                <li>전체코스</li>
+                                <li class="mysub">테마추천코스
+                                    <ul>
+                                        <li><a href="proA-sub1.html" class="second">청주읍성 코스</a></li>
+                                        <li><a href="proA-sub2.html" class="second">청주역 코스</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="snb04">
+                            <ul>
+                                <li>유형문화재</li>
+                                <li>무형문화재</li>
+                                <li>문화시설 및 유산</li>
+                            </ul>
+                        </li>
+                        <li id="snb05">
+                            <ul>
+                                <li>지도교통편</li>
+                                <li>청주둘러보기</li>
+                                <li>동네지도</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="vertical-slider">
+            <div class="slide vertical-slide s01">
+                <div class="slide-content">
+                    <div class="b01">
+                        <h2>청주문화재야행<br>발자취</h2>
+                        <span>2016년부터 현재까지</span>
+                    </div>
+                    <div class="icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <span>2016 청주야행, &#35;밤드리 노니다가</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide vertical-slide s02">
+                <div class="slide-content">
+                    <h1>Vertical Slide #2</h1>
+                    <div class="rac"></div>
+                    <div class="rac 02"></div>
+                    <div class="button"></div>
+                    <div class="neontxt">
+                        <div class="up">
+                            <span>2021</span>
+                            <div>청</div>
+                            <div>주</div>
+                        </div>
+                        <div class="down">
+                            <div>문</div>
+                            <div>화</div>
+                            <div>재</div>
+                            <div>야</div>
+                            <div>행</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide vertical-slide s03">
+                <div class="slide-content">                   
+                    <div class="light">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide vertical-slide s04">
+                <div class="slide-content">
+                    <h1>Vertical Slide #4</h1>
+                </div>
+            </div>
+            <div class="slide vertical-slide s05">
+                <div class="slide-content">
+                    <h1>Vertical Slide #5</h1>
+                </div>
+            </div>
+            <div class="slide vertical-slide s06">
+                <div class="slide-content">
+                    <h1>Vertical Slide #6</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/34_3verticalSlickPagination.js"></script>
+</body>
+
+</html>

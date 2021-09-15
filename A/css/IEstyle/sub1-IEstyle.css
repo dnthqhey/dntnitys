@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+.is-ie .scroll::before {
+    height: 233px;
+    top: 41px;
+}
+
+/* .is-ie :root {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+   
+} */
+
+
+
+/* header기본디자인 */
+.ie11 header .inner .gnb {
+    margin-left: 440px;
+    margin-right: -25px;
+}
+
+.ie10 header .inner .gnb {
+    float: right;
+    margin-left: 461px;
+}
+
+.ie10 header .inner .gnb > div {
+    float: right;
+}
+
+
+.ie10 header .inner .gnb > div > span {
+    margin: 0 29px 0;
+    padding: 0 22px;
+}
+
+.ie10 header .inner:hover .gnb > div > span::after {
+    top: 0px;
+    right: -30px;
+}
+.ie11 header .inner:hover .gnb > div > span::after {
+    top: 16px;
+    margin: 33px 30px 0 0px;
+    right: -30px;
+}
+.ie11 .visual .b01 {
+    font-size: 1.2rem;
+}
+
+
+.ie10 header .inner .gnb > div > span:nth-of-type(4) {
+    padding: 0 6px;
+    /* margin: 0 8px; */
+}
+
+.ie11 header .inner .gnb .subgnball > ul {
+    margin: 20px 0 0 800px
+}
+
+.ie11 header .inner .gnb .subgnball > ul > li > ul > li {
+    padding: 0 0 0 25px;
+}
+
+
+.ie10 header .inner .gnb .subgnball > ul {
+    margin: 20px 0 0 800px
+}
+
+.ie10 header .inner .gnb .subgnball > ul > li > ul > li {
+    padding: 0 0 0 25px;
+}
+
+/* ---------------------------- */
+
+.is-ie .swiper-pagination-bullet {
+    background: #D6007F;
+}

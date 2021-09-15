@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+/* ie11hack */
+/* @media all and (-ms-high-contrast:none) {
+
+} */
+/* ie10,ie11 hack */
+/* @media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+   
+} */
+
+/*IE는 이미지가 앵커의 자식인 경우 이미지 주위에 테두리를 추가하므로 테두리를 none으로 설정하여이를 제거 할 수 있습니다.*/
+a img {
+    border: none;
+}
+
+
+/* header기본디자인 */
+.ie11 header .inner .gnb {
+    margin-left: 492px;
+    margin-right: -25px;
+}
+
+.ie10 header .inner .gnb {
+    float: right;
+    margin-left: 461px;
+}
+
+.ie10 header .inner .gnb > div {
+    float: right;
+}
+
+
+.ie10 header .inner .gnb > div > span {
+    margin: 0 29px 0;
+    padding: 0 22px;
+}
+
+.ie10 header .inner:hover .gnb > div > span::after {
+    top: 0px;
+    right: -30px;
+}
+.ie11 header .inner:hover .gnb > div > span::after {
+    top: 16px;
+    margin: 33px 12px 0 23px;
+    right: -30px;
+}
+.ie11 .visual .b01 {
+    font-size: 1.2rem;
+}
+
+
+.ie10 header .inner .gnb > div > span:nth-of-type(4) {
+    padding: 0 6px;
+    /* margin: 0 8px; */
+}
+.ie10 header .inner .gnb .subgnball > ul {
+    margin: 20px 0 0 770px;
+}
+
+.ie10 header .inner .gnb .subgnball > ul > li > ul > li {
+    padding: 0 0 0 45px;
+}
+
+/* ---------------------------- */
+
+.ie10 .visual .b01 {
+    font-size: 1.2rem;
+}
+.ie10 .visual .scrollmouse {
+    top: 897px;
+
+}
+
+.is-ie .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: rgb(255, 208, 1);
+}
+/* .is-ie .fa,
+.fas {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+} */
+/* .is-ie section.video .content .arrow::before {
+display:unset;
+}
+.is-ie section.video .content .arrow {
+ padding: 0 16px;
+
+} */
+
+.is-ie .sns span {
+    list-style-type: none;
+    float: left;
+}
+
+.is-ie .news .swiper-button-next,
+.is-ie .news .swiper-button-prev {
+    width: 65px;
+    height: 65px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    color: #fff;
+    padding: 0 6px 0 0;
+    z-index: 3;
+    background: url(/image/prev.png)41% 50% no-repeat;
+    background-size: 46%
+}
+
+
+.is-ie .news .swiper-button-next {
+    padding: 0 0 0 6px;
+    background: url(/image/next.png)63% 50% no-repeat;
+    background-size: 46%;
+}
+.ie10 .banner h4 {
+   padding: 15px 0 0;
+   margin: 0 0 0 2%;
+   margin-right: 1400px;
+   font-size: 1.5rem;
+   color: rgb(226, 226, 226);
+   background: #010f1b;
+   width: 240px;
+   height: 65px;
+   text-align: center;
+   z-index: 5;
+}
+
+.is-ie .banner h4 {
+    position: absolute;
+    top: -28px;
+}
+
+.ie11 .banner h4 {
+    top: 0px;
+}
+.is-ie .bt-wrap > .swiper-button-prev {
+    background: url(/image/boraprev.png)41% 50% no-repeat;
+    background-size: 46%;
+    top: 19px;
+}
+
+.is-ie .bt-wrap > .swiper-button-next {
+    background: url(/image/boranext.png)53% 50% no-repeat;
+    background-size: 46%;
+    top: 19px;
+}
+
+.is-ie header .inner:hover .gnb > div > span::after {
+    top: 3px;
+    left: -22px;
+}
+
+.is-ie .view .button {
+    left: 41%;
+
+}
+
+.ie10 .course .box.right h3 {
+    height: 95px;
+}
+
+
+.ie10 .course .inner .right > .bottom {
+    bottom: 0;
+    height: 85px;
+}
+
+.is-ie .course .inner .bottom span {
+    margin: 9px 85px 0 0;
+    float: left;
+}
+.ie10 .course .inner .bottom span {
+    /* margin: 14px 25px 0 72px; */
+    float: left;
+}
+
+.ie10 .course .inner .right .c03 {
+    height: 260px;
+}
+
+.ie10 .gnb > div > span:hover::before {
+    width: 91%;
+    height: 4px;
+    top: 40px;
+    left: 8px;
+    content: "";
+    background: #D6007F;
+    display: block;
+    position: absolute;
+}
+
+.is-ie section.video .content > span {
+   float: left;
+
+}
