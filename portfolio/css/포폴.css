@@ -634,6 +634,7 @@ display: block;
     height: 40px;
     top: 670px;
     left: 50px;
+    z-index: 100;
     line-height: 3rem;
     position: absolute;
     background-color: #0d1e78;
@@ -753,6 +754,7 @@ display: block;
     background-color: #0d1e78;
     color: #fff;
     cursor: pointer;
+    z-index: 100;
 }
 
 .sec04 .colorgr {
@@ -872,11 +874,11 @@ display: block;
 
 /* ------프로그래스 바-------- */
 
-.big2 {
+.sec01 .big2 {
     width: 900px;
     height: 300px;
     right: 0%;
-    display: block;
+    display: none;
     position: relative;
     /* background-color: #999; */
 }
@@ -909,16 +911,17 @@ display: block;
 
 
 
-.progress-bar {
+.sec01 .progress-bar {
     position: relative;
     width: 400px;
     height: 20px;
     margin: 0 auto 35px;
     border: 1px solid #225cff;
     border-radius: 30px;
+    
 }
 
-.bar {
+.sec01 .bar {
     position: absolute;
     left: 0;
     top: 0;
@@ -928,7 +931,7 @@ display: block;
     border-radius: 30px;
 }
 
-.a {
+.sec01 .a {
     position: absolute;
     top: -133%;
     bottom: 0;
@@ -939,7 +942,7 @@ display: block;
     opacity: 0.7;
 }
 
-.b {
+.sec01 .b {
     position: absolute;
     top: -133%;
     bottom: 0;
@@ -950,7 +953,7 @@ display: block;
     opacity: 0.7;
 }
 
-.c {
+.sec01 .c {
     position: absolute;
     top: -133%;
     bottom: 0;
