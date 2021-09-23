@@ -629,7 +629,7 @@ display: block;
     animation-fill-mode: forwards;
 }
 
-.swiper-container.swiper_h .swiper-slide:nth-of-type(1) .button {
+.swiper-container.swiper_h .swiper-slide:nth-of-type(1) .button >a{
     width: 180px;
     height: 40px;
     top: 670px;
@@ -744,7 +744,7 @@ display: block;
     /* background: rgb(204, 197, 197); */
 }
 
-.sec04 .button {
+.sec04 .button > a {
     width: 180px;
     height: 40px;
     top: 409px;
@@ -802,16 +802,17 @@ display: block;
     background: url(../gallery/pojectB-m.png) 50% 0 no-repeat;
     background-size: contain;
     position: relative;
+    border: 8px solid #304e1e;
 }
-.sec04 .ract{
+/* .sec04 .ract{
     width: 640px;
     height: 410px;
     top: 274px;
     position: absolute;
     border: 8px solid #304e1e;
-}
+} */
 
-.sec04 .ract::after{
+.sec04 .img2a::after{
     width: 120px;
     height: 120px;
     top: -174px;
@@ -823,7 +824,7 @@ display: block;
     display: block;
     z-index: 40;
 }
-.sec04 .ract::before{
+.sec04 .img2at::before{
     width: 932px;
     height: 196px;
     bottom: -222px;
