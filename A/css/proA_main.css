@@ -537,7 +537,7 @@ header .inner:hover .gnb .subgnball {
     height: 63px;
     z-index: 100;
     animation: scrollmouse 1.5s infinite;
-    top: 957px;
+    top: 89vh;
     position: absolute;
 }
 
