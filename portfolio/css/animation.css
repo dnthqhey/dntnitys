@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'PFStardust';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/PFStardust.woff') format('woff');
+    /* font-weight: normal;
+  font-style: normal; */
+}
+
+/* 귀엽고 두꺼운 폰트 */
+@font-face {
+    font-family: 'KOTRA_BOLD-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(720deg);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -10%, 0);
+        transform: translate3d(0, -10%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0%, 0);
+        transform: translate3d(0, 10%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(10%, 0%, 0);
+        transform: translate3d(10%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-10%, 0%, 0);
+        transform: translate3d(-10%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+@keyframes fish{
+    0% {        
+        -webkit-transform:translate(826px, 420px);;
+        transform:translate(826px, 420px);;
+    }
+
+    100% {
+        -webkit-transform:translate(726px, 420px);;
+        transform:translate(726px, 420px);;
+    }
+}
+
+@keyframes ice{
+    0% {opacity: 1;     
+        -webkit-transform: translate(141px, 406px) rotate(5deg);
+        transform: translate(141px, 406px) rotate(5deg);
+    }
+  
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(141px, 530px)rotate(35deg);
+        transform: translate(141px, 530px)rotate(35deg);
+       
+    }
+}
+
+@keyframes bigice{
+    0% {        
+        -webkit-transform: translate(-120px, 301px) rotate(45deg);
+        transform: translate(-120px, 301px) rotate(45deg);}
+
+
+    100% {
+        -webkit-transform: translate(-120px, 490px) rotate(135deg);
+        transform: translate(-120px, 490px) rotate(135deg);
+    }
+}
