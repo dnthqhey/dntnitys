@@ -198,7 +198,7 @@ body {
     position: absolute;
     background: url(../image/shark.png) 0 0 no-repeat;
     background-size: cover;
-    z-index: 10;
+    z-index: -1;
     transform: translate(-490px, 350px);
 }
 
