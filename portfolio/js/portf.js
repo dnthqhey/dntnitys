@@ -37,8 +37,6 @@ var swiper = new Swiper(".mySwiper", {
     },
     slideChangeTransitionEnd: function() {
         $(".sec02, .sec03, .sec04, .sec05").addClass("on");
-        // if($(".sec02").hasClass("on")){
-                 
     },
 },
   pagination: {

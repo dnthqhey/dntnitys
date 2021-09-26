@@ -100,28 +100,27 @@
         transform:translate(726px, 420px);;
     }
 }
-
 @keyframes ice{
     0% {opacity: 1;     
-        -webkit-transform: translate(141px, 406px) rotate(5deg);
-        transform: translate(141px, 406px) rotate(5deg);
+        -webkit-transform: translate(161px, 406px) rotate(5deg);
+        transform: translate(161px, 406px) rotate(5deg);
     }
   
     100% {
         opacity: 0;
-        -webkit-transform: translate(141px, 530px)rotate(35deg);
-        transform: translate(141px, 530px)rotate(35deg);
+        -webkit-transform: translate(161px, 530px)rotate(35deg);
+        transform: translate(161px, 530px)rotate(35deg);
        
     }
 }
 
 @keyframes bigice{
-    0% {        
+    0% {  opacity: 1;       
         -webkit-transform: translate(-120px, 301px) rotate(45deg);
-        transform: translate(-120px, 301px) rotate(45deg);}
+        transform: translate(-120px, 301px) rotate(45deg);
+    }
 
-
-    100% {
+    100% {opacity: 0; 
         -webkit-transform: translate(-120px, 490px) rotate(135deg);
         transform: translate(-120px, 490px) rotate(135deg);
     }
