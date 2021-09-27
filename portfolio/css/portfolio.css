@@ -828,12 +828,22 @@ display: block;
     background-size: cover;
 
 }
-
 .sec05.on .img3a{
     opacity: 0;
     animation: fadeInUp 1.5s ease;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+}
+.sec05 .img3a a{
+    width: 93%;
+    height: 90vh;
+    top: 63px;
+    left: 50px;
+    z-index: 100;
+    line-height: 3rem;
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
 }
 
 .swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet{   
