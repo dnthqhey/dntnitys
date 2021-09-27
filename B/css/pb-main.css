@@ -32,7 +32,8 @@
 
 ul,
 li,
-a {
+a,
+li a  {
     list-style: none;
     text-decoration: none;
 }
@@ -1197,7 +1198,6 @@ article.art02 .con10 .area_right .cir {
     width: 100px;
     height: 67px;
     margin: 0px auto 0;
-    flex-shrink: 0;
     background: url(../image/dataopen.svg) 50% 47% no-repeat;
     background-size: 36%;
     cursor: pointer;
@@ -1462,12 +1462,12 @@ article.art04 .inner .map {
     width: 346px;
     height: 516px;
     top: 20px;
-    right: 199px;
+    right: 0px;
     margin: -33px 0px 0 -252px;
     background: url(../image/map.png) 0 0 no-repeat;
     background-size: cover;
     z-index: 2;
-    position: absolute;
+    position: relative;
 }
 
 article.art04.inner .map::before {
@@ -1476,17 +1476,14 @@ article.art04.inner .map::before {
     /* position: absolute; */
 }
 
-
-
 /* 지도 슬라이드 */
 .art04 .inner .mySwiper4 {
     width: 80vh;
     height: 390px;
     top: 0px;
-    left: -50px;
+    left: 0px;
     position: relative;
     overflow: hidden;
-    
 }
 
 .art03.second .inner .mySwiper4 .swiper-slide {
@@ -1515,20 +1512,11 @@ article.art04.inner .map::before {
     object-fit: cover;
 }
 
-/* .art04 .inner .mySwiper4 .a.swiper-pagination-bullet {
-    position: absolute;
-    top: 42px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    left: 173px;
-    z-index: 100;
-    line-height: 4rem;
-    font-weight: 500;
-    text-align: center;
-    color: #fff;
-    background-color: #4f617a;
-} */
+.art04 .swiper-pagination-bullets {
+    top: 245px;
+    left: 193px;
+}
+
 .art04 .swiper-pagination-bullets .swiper-pagination-bullet {
     cursor: pointer;
     box-shadow: 6.3px 9.5px 11px rgb(0 0 0 / 30%);
@@ -1544,85 +1532,91 @@ article.art04.inner .map::before {
     z-index: 500;
     position: absolute;
     background: #50617a;
-  }
+}
 
-  /* .art04 .swiper-pagination-bullets .swiper-pagination-bullet-active {
+/* .art04 .swiper-pagination-bullets .swiper-pagination-bullet-active {
     background: #10e4ac;
     font-size: 15px;
   } */
 
-  .art04 .swiper-pagination-bullets .swiper-pagination-bullet::after{
-     position: absolute;
-      content: "춘천";
-      top: 30%;
-      left: 30%;
-      font-size: 1.1rem;
-  }
-  .art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(2){
+.art04 .swiper-pagination-bullets .swiper-pagination-bullet::after {
+    position: absolute;
+    content: "춘천";
+    top: 30%;
+    left: 30%;
+    font-size: 1.1rem;
+}
+
+.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(2) {
     top: -152px;
     left: 1102px;
     background: #b770ca;
 }
 
-.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(2)::after{
-    content: "횡성"; 
+.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(2)::after {
+    content: "횡성";
 }
-  .art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(3){
+
+.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(3) {
     top: -90px;
     left: 1145px;
     background: #4f9cdc;
 }
 
-.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(3)::after{
+.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(3)::after {
     content: "치유원";
     top: 33%;
     left: 17%;
 }
-.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(4){
+
+.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(4) {
     top: -45px;
     left: 1041px;
     background: #41ba87;
 }
 
-.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(4)::after{
-    content: "대전"; 
+.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(4)::after {
+    content: "대전";
 }
-  .art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(5){
+
+.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(5) {
     top: -8px;
     left: 1115px;
     background: #cc982a;
 }
 
-.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(5)::after{
-    content: "칠곡"; 
+.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(5)::after {
+    content: "칠곡";
 }
-.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(6){
+
+.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(6) {
     top: 15px;
     left: 1171px;
     background: #a7a091;
 }
 
-.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(6)::after{
-    content: "청도"; 
+.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(6)::after {
+    content: "청도";
 }
-  .art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(7){
+
+.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(7) {
     top: 48px;
     left: 1013px;
     background: #50617a;
 }
 
-.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(7)::after{
-    content: "장성"; 
+.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(7)::after {
+    content: "장성";
 }
 
- .art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(8){
+.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(8) {
     top: 106px;
     left: 981px;
-    background: #8ca3d8;   
+    background: #8ca3d8;
 }
 
-.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(8)::after{
-    content: "나주"; 
+.art04 .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(8)::after {
+    content: "나주";
 }
 
 
@@ -1648,7 +1642,8 @@ article.art04.inner .map::before {
     margin-top: 12px;
     display: inline-block;
 }
-.art04 .inner .txtgroup .subt::after{
+
+.art04 .inner .txtgroup .subt::after {
     content: "";
     width: 260px;
     height: 19px;
@@ -1677,7 +1672,7 @@ article.art05 .wrap {
 
 /* 탭메뉴 - 세로형 */
 article.art05 .tabV {
-    width: 100%;    
+    width: 100%;
 }
 
 article.art05 .tabV ul {
@@ -2084,6 +2079,7 @@ footer .footGroup .adress {
     -js-display: flex;
     -webkit-display: flex;
     -o-display: flex;
+    top: 10px;
 }
 
 footer .footGroup .adress span:after {
@@ -2102,7 +2098,7 @@ footer .footGroup .adress span:first-child:after {
 
 footer .footGroup .copyright {
     width: 100%;
-    margin-top: 5px;
+    margin-top: 15px;
     color: #ccc;
     text-align: left;
 }

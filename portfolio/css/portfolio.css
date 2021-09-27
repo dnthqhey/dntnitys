@@ -199,7 +199,7 @@ body {
     background: url(../image/shark.png) 0 0 no-repeat;
     background-size: cover;
     z-index: -1;
-    transform: translate(-490px, 350px);
+    transform: translate(-390px, 450px);
 }
 
 
@@ -596,8 +596,8 @@ display: block;
 
 .swiper-container.swiper_h .colorgr {
     display: flex;
-    top: 100px;
-    left: 50px;
+    top: 120px;
+    left: -100px;
     position: relative;
 
 }
@@ -718,6 +718,7 @@ display: block;
 
 .sec04 .colorgr {
     display: flex;
+    top: 480px;
     left: 50px;
     position: absolute;
 
