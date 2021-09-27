@@ -609,7 +609,7 @@ display: block;
 .swiper-container.swiper_h .colorgr {
     display: flex;
     top: 120px;
-    left: -100px;
+    left: -125px;
     position: relative;
 
 }
