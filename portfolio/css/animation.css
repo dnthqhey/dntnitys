@@ -49,7 +49,7 @@
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        -webkit-transform: translate3d(0, 0%, 0);
+        -webkit-transform: translate3d(0, 10%, 0);
         transform: translate3d(0, 10%, 0);
     }
 
@@ -123,5 +123,18 @@
     100% {opacity: 0; 
         -webkit-transform: translate(-120px, 490px) rotate(135deg);
         transform: translate(-120px, 490px) rotate(135deg);
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #9d37f9
     }
 }
