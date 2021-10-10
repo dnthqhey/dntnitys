@@ -76,6 +76,7 @@ $(document).ready(function(){
   // autoType(".type-js", 150);
 
     $('.tri').click(function() {
+      
         $('.big2').show();
     });  
 

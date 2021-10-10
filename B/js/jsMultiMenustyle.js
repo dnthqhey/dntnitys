@@ -158,7 +158,7 @@ var swiper = new Swiper(".mySwiper4", {
         }
     }
 
-    theToggle.onclick = function () {
-        toggleClass(this, 'on');
-        return false;
-    }
+    // theToggle.onclick = function () {
+    //     toggleClass(this, 'on');
+    //     return false;
+    // }

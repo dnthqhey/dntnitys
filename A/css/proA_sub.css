@@ -709,9 +709,9 @@ section.section1 {
 .section1 .img {
     width: 20%;
     height: 202px;
-    top: 550px;
-    left: 510px;
-    /* margin: 244px 0 0 370px; */
+    /* top: 550px;
+    left: 510px; */
+    margin: 244px 0 0 398px;
     position: absolute;
     z-index: -1;
     background: url(../cj_night-image/도민홍보관.png)50% 12% no-repeat;

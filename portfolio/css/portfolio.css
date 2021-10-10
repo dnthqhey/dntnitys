@@ -413,10 +413,9 @@ body {
     padding: 0 0 0 15px;
     line-height: 2.5rem;
     position: absolute;
-    top: 90px;
-    left: 27px;
     opacity: 0;
-    /* text-decoration: none; */
+    display: block;
+    margin: 10px 0% 0 7%;
     border-radius: 16px;
     border: 2px solid #0d1e78;
     color: #0d1e78;
@@ -424,8 +423,20 @@ body {
     background-color: transparent;
 }
 .sec02.on .swiper_h .swiper-slide:nth-child(1) .bt {
-    animation: fadeInLeft .5s 2.2s 1;
+    animation: tingLeft .5s 2.2s 1;
     animation-fill-mode: forwards;
+}
+.sec02.on .swiper_h .swiper-slide:nth-child(1) .bt:hover::after{
+   width: 15px;
+   height: 15px;
+   background-color: #450be2;
+   border-radius: 50%;
+   content: "";
+   display: block;
+   z-index: 110;
+   opacity: .7;
+   margin: -25px 0px 0 237px;
+   
 }
 
 .swiper_h .swiper-slide:nth-child(1) .bt .arrowline {
@@ -440,7 +451,7 @@ body {
 }
 
 .sec02.on .swiper_h .swiper-slide:nth-child(1) .bt .arrowline {
-    animation: fadeInLeft .5s 2.2s 1;
+    animation: tingLeft .5s 2.2s 1;
     animation-fill-mode: forwards;    
 }
 
@@ -504,7 +515,7 @@ body {
 .swiper_h .swiper-slide:nth-child(1) .bora>div {
     margin: 0 auto 0;
     text-align: start;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     color: #c7c7c7;
 }
@@ -874,8 +885,8 @@ background-color: #fff;   }
 display: block;
 width: 100%;
 height: 80%;
-top: 17px;
-left: 114px;
+top: 32px;
+left: 128px;
 position: absolute;
 
 }
@@ -898,7 +909,6 @@ position: absolute;
 .bfont1>p {
     color: #225cff;
     font-size: 1.6rem;
-    line-height: 3.8rem;
     text-align: left;
 }
 
