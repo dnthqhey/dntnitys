@@ -124,7 +124,7 @@ body {
     display: block;
 }
 
-.tri {
+.guide .tri {
     position: absolute;
     width: 0;
     top: 58vh;
@@ -142,7 +142,7 @@ body {
 }
 
 /* 레벨 1 */
-.font {
+.guide .font {
     top: 55vh;
     left: 51%;
     font-family: 'PFStardust';
