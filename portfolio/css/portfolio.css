@@ -123,12 +123,13 @@ body {
     z-index: 1;
     display: block;
 }
-.guide{position:relative; display:block}
+.guide{position:relative;display:block;font-size: 0;line-height: 0;margin-top: 342px;margin-left: 118px;}
 
-.guide .tri{display:inline-block; top:58vh; left:48%; width:0; height:0; margin:0 auto; border-top:32px solid #EFBA26; border-right:15px solid transparent; border-bottom:none; border-left:18px solid transparent; transform-style:preserve-3d; animation:rotate 2s infinite; transform-origin:center center;-webkit-transform-style:preserve-3d;}
+.guide .tri{display:inline-block; width:0; height:0; margin:0 auto; border-top:32px solid #EFBA26; border-right:15px solid transparent; border-bottom:none; border-left:18px solid transparent; transform-style:preserve-3d; animation:rotate 2s infinite; transform-origin:center center;-webkit-transform-style:preserve-3d;}
 
 /* 레벨 1 */
-.guide .font{display:inline-block; color:#fff; font-size:3rem; font-weight:600; font-family:'PFStardust'; text-align:center; line-height:100px;}
+.guide .font{display:inline-block;margin-left: 18px; color:#fff; font-size:3rem; font-weight:600; font-family:'PFStardust'; text-align:center; line-height:100px;}
+
 
 .sec01 .intro {
     font-size: 2.1rem;
@@ -840,109 +841,4 @@ background-color: #fff;   }
     background-color: #5d0ca8;
     z-index: 200;
     display: block;
-}
-
-
-/* ------프로그래스 바-------- */
-
-.sec01 .big2 {
-    width: 900px;
-    height: 300px;
-    right: 0%;
-    display: none;
-    position: relative;
-    /* background-color: #999; */
-}
-
-.nbar {
-    display: none;
-}
-.sec01 .big2 .wrap{
-display: block;
-width: 100%;
-height: 80%;
-top: 32px;
-left: 128px;
-position: absolute;
-
-}
-
-.rightbox1 {
-    width: 700px;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-}
-
-.bfont1 {
-    font-size: 1.1rem;
-    width: 300px;
-    left: 165px;
-    /* top: 370px; */
-    position: relative;
-}
-
-.bfont1>p {
-    color: #225cff;
-    font-size: 1.6rem;
-    text-align: left;
-}
-
-
-
-.sec01 .progress-bar {
-    position: relative;
-    width: 400px;
-    height: 20px;
-    margin: 0 auto 35px;
-    border: 1px solid #225cff;
-    border-radius: 30px;
-    
-}
-
-.sec01 .bar {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 0;
-    background: #225cff;
-    border-radius: 30px;
-}
-
-.sec01 .a {
-    position: absolute;
-    top: -133%;
-    bottom: 0;
-    right: 137px;
-    font-size: 1.6rem;
-    color: #225cff;
-    line-height: 30px;
-    opacity: 0.7;
-}
-
-.sec01 .b {
-    position: absolute;
-    top: -133%;
-    bottom: 0;
-    right: 98px;
-    font-size: 1.6rem;
-    color: #225cff;
-    line-height: 30px;
-    opacity: 0.7;
-}
-
-.sec01 .c {
-    position: absolute;
-    top: -133%;
-    bottom: 0;
-    right: 91px;
-    font-size: 1.6rem;
-    color: #225cff;
-    line-height: 30px;
-    opacity: 0.7;
-}
-
-h4 {
-    display: none;
 }
