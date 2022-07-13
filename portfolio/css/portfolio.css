@@ -123,36 +123,12 @@ body {
     z-index: 1;
     display: block;
 }
+.guide{position:relative; display:block}
 
-.guide .tri {
-    position: absolute;
-    width: 0;
-    top: 58vh;
-    left: 48%;
-    margin: 0 auto;
-    height: 0;
-    border-left: 18px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 32px solid #EFBA26;
-    border-bottom: none;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    animation: rotate 2s infinite;
-    transform-origin: center center;
-}
+.guide .tri{display:inline-block; top:58vh; left:48%; width:0; height:0; margin:0 auto; border-top:32px solid #EFBA26; border-right:15px solid transparent; border-bottom:none; border-left:18px solid transparent; transform-style:preserve-3d; animation:rotate 2s infinite; transform-origin:center center;-webkit-transform-style:preserve-3d;}
 
 /* 레벨 1 */
-.guide .font {
-    top: 55vh;
-    left: 51%;
-    font-family: 'PFStardust';
-    line-height: 100px;
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 600;
-    color: #fff;
-    position: absolute;
-}
+.guide .font{display:inline-block; color:#fff; font-size:3rem; font-weight:600; font-family:'PFStardust'; text-align:center; line-height:100px;}
 
 .sec01 .intro {
     font-size: 2.1rem;
