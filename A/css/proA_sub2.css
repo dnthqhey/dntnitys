@@ -112,7 +112,7 @@ header {
 header.visit::after {
     width: 100%;
     height: 0px;
-    background: rgba(0, 0, 0, 0.8); 
+    background: rgba(0, 0, 0, 0.8);
     display: block;
     content: "";
     z-index: 1;
@@ -205,7 +205,7 @@ header .inner .gnb .subgnball .wrap2{
     justify-content: flex-end;
 }
 
- header .inner .gnb .subgnball .wrap2 ul {
+header .inner .gnb .subgnball .wrap2 ul {
     flex-wrap: wrap;
     flex-direction: row;
     position: relative;
@@ -222,7 +222,7 @@ header .inner .gnb .subgnball .wrap2 ul > li:last-child {
 }
 
 header .inner .gnb .subgnball .wrap2  ul > li > ul {
-  width: 100%;
+    width: 100%;
 }
 
 header .inner .gnb .subgnball .wrap2 ul > li > ul > li {
@@ -336,7 +336,7 @@ header .inner:hover .gnb .subgnball {
 /* scroll 버튼 */
 .scroll {
     position: fixed;
-    right: 10px;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
     width: 20px;
@@ -430,15 +430,19 @@ header .inner:hover .gnb .subgnball {
 /* 여기서부터 비주얼 */
 .visual {
     width: 100%;
-    height: 90vh;
+    height: 830px;
     display: flex;
     /* align-items: flex-end; */
     justify-content: center;
     position: relative;
-    background-color: #B9BABA;
     background: url(../cj_night-image/배경무늬.png) 0 0 no-repeat, #B9BABA;
     background-size: cover;
 }
+
+@media all and (max-width:1875px){
+    .visual {height: 735px;}
+}
+
 /* mobile back */
 .visual::before {
     content: "";
@@ -453,6 +457,15 @@ header .inner:hover .gnb .subgnball {
 
 .visual .moblie {
     display: none;
+}
+
+/**/
+/*상주경천섬체*/
+@font-face{
+    font-family: 'sangju';
+    font-weight: 600;
+    src: url("../font/SANGJU-Gyeongcheon-Island.ttf") format('truetype');
+
 }
 
 .visual .b01 {
@@ -475,7 +488,7 @@ header .inner:hover .gnb .subgnball {
     /* display: block; */
     content: "";
 }
-
+.visual .b01 h2{font-size:37px; line-height:47px; font-family: 'sangju';}
 .visual .b01 div::selection,
 .visual .b01 p::selection,
 .section1 .intro::selection,
@@ -522,9 +535,9 @@ header .inner:hover .gnb .subgnball {
 .visual .wrap {
     position: relative;
     width: 1266px;
-    height: 900px;
-    top: -10px;
-    left: 140px;
+    height: 783px;
+    top: -28px;
+    left: 211px;
     background: url(../image/cus02.png)0 0 no-repeat;
     background-size: contain;
 }
@@ -535,8 +548,8 @@ header .inner:hover .gnb .subgnball {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    top: 786px;
-    left: 289px;
+    top: 684px;
+    left: 249px;
     background: rgb(255, 255, 255);
     border: 5px solid rgb(216, 216, 216);
 }
@@ -547,26 +560,26 @@ header .inner:hover .gnb .subgnball {
 }
 
 .visual.on .wrap > div:nth-child(2) {
-    top: 665px;
-    left: 780px;
+    top: 578px;
+    left: 679px;
     animation-delay: 0.4s;
 }
 
 .visual.on .wrap > div:nth-child(3) {
-    top: 605px;
-    left: 417px;
+    top: 528px;
+    left: 363px;
     animation-delay: 0.9s;
 }
 
 .visual.on .wrap > div:nth-child(4) {
-    top: 210px;
-    left: 251px;
+    top: 181px;
+    left: 217px;
     animation-delay: 1.3s;
 }
 
 .visual.on .wrap > div:nth-child(5) {
-    top: 122px;
-    left: 247px;
+    top: 105px;
+    left: 216px;
     animation-delay: 1.8s;
 }
 .visual .wrap .map {
@@ -589,11 +602,12 @@ header .inner:hover .gnb .subgnball {
     background: url(../svg/mapPoint.svg) 0 0 no-repeat;
     width: 30px;
     height: 42px;
+    top: 760px;
+    left: 256px;
     position: absolute;
     z-index: 10;
     transform: translate(-47px, -692px);
     border: none;
-
 }
 .visual.on .wrap .mapp {
     animation: mapp 1s infinite;
@@ -1273,7 +1287,7 @@ section.section3 .aniBox {
 }
 
 .section5 .group .popup {
-    position: absolute;
+    position: absolute; z-index: 100;
     background: url(../svg/ticket.svg)50% 50% no-repeat;
     width: 474px;
     height: 227px;

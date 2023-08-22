@@ -360,9 +360,18 @@ header .inner:hover .gnb .subgnball {
     top: 300px;
     left: 150px;
     text-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
-    ;
 }
 
+/**/
+/*상주경천섬체*/
+@font-face{
+    font-family: 'sangju';
+    font-weight: 600;
+    src: url("../font/SANGJU-Gyeongcheon-Island.ttf") format('truetype');
+
+}
+
+.visual .b01 h1{font-size:37px; line-height:47px; font-family: 'sangju';}
 .visual .b01 p::before {
     top: -9px;
     position: absolute;
