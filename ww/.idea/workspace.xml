@@ -5,7 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="853b44bb-04b7-4348-bfa1-7bfdc19c9b3f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../women_welfare/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common2021/css/commonlayout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common2021/css/font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common2021/font/SCDream-bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common2021/font/SpoqaHanSans-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common2021/font/SpoqaHanSans-Light.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common2021/font/SpoqaHanSans-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common2021/images/common_layout/add_box_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common2021/images/common_layout/banner_control_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common2021/images/common_layout/family_btn_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common2021/images/common_layout/up_button_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common2021/images/common_layout/www_btn_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common2021/js/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common2021/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/site/welfare/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/welfare/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +121,7 @@
       <workItem from="1692836957855" duration="4467000" />
       <workItem from="1692924980268" duration="1311000" />
       <workItem from="1692929933708" duration="1145000" />
+      <workItem from="1692942722445" duration="1375000" />
     </task>
     <servers />
   </component>
