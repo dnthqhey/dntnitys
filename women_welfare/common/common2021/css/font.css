@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+/* 본고딕 */
+
+@font-face{
+	font-family: 'NotoKr';
+	font-weight: 200;
+	src: url("../font/SpoqaHanSans-Light.woff2") format('woff2'),
+	url("../font/SpoqaHanSans-Light.woff") format('woff');
+}
+@font-face{
+	font-family: 'NotoKr';
+	font-weight: 400;
+	src: url("../font/SpoqaHanSans-Regular.woff2") format('woff2'),
+	url("../font/SpoqaHanSans-Regular.woff") format('woff');
+}
+@font-face{
+	font-family: 'NotoKr';
+	font-weight: 600;
+	src: url("../font/SpoqaHanSans-Bold.woff2") format('woff2'),
+	url("../font/SpoqaHanSans-Bold.woff") format('woff');
+}
+
+
+
+/* Lato */
+@font-face{
+	font-family: 'Lato';
+	font-weight: 200;
+	src: url("../font/Lato-Light.woff2") format('woff2'),
+	url("../font/Lato-Light.woff") format('woff');
+}
+@font-face{
+	font-family: 'Lato';
+	font-weight: 400;
+	src: url("../font/Lato-Regular.woff2") format('woff2'),
+	url("../font/Lato-Regular.woff") format('woff');
+}
+@font-face{
+	font-family: 'Lato';
+	font-weight: 600;
+	src: url("../font/Lato-Bold.woff2") format('woff2'),
+	url("../font/Lato-Bold.woff") format('woff');
+}
+
+
+@font-face{
+	font-family:'SCDream';
+	font-weight:300;
+	src:url('../font/SCDream-light.woff2') format('woff2'), url('../font/SCDream-light.woff') format('woff');
+}
+@font-face{
+	font-family:'SCDream';
+	font-weight:400;
+	src:url('../font/SCDream-Regular.woff2') format('woff2'), url('../font/SCDream-Regular.woff') format('woff');
+}
+@font-face{
+	font-family:'SCDream';
+	font-weight:500;
+	src:url('../font/SCDream-Medium.woff2') format('woff2'), url('../font/SCDream-Medium.woff') format('woff');
+}
+@font-face{
+	font-family:'SCDream';
+	font-weight:600;
+	src:url('../font/SCDream-bold.woff2') format('woff2'), url('../font/SCDream-bold.woff') format('woff');
+}
