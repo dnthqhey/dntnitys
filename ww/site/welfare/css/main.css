@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 /* Layout */
-@import url('ww/common/css/default.css') /* 기본 default */;
-@import url('ww/common/common2021/css/commonlayout.css') /* 상,하단 공통 레이아웃 */;
-@import url('ww/site/road/css/font.css');
+@import url('/common/css/default.css') /* 기본 default */;
+@import url('/common/css/commonlayout.css') /* 상,하단 공통 레이아웃 */;
+@import url('/site/road/css/font.css');
 @import url('commonlayout.css');
 @import url('mainlayout.css');
