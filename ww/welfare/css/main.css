@@ -4,5 +4,5 @@
 @import url('/common/css/default.css') /* 기본 default */;
 @import url('/common/css/commonlayout.css') /* 상,하단 공통 레이아웃 */;
 @import url('/road/css/font.css');
-@import url('/welfare/css/commonlayout.css');
-@import url('/welfare/css/mainlayout.css');
+@import url('commonlayout.css');
+@import url('mainlayout.css');
