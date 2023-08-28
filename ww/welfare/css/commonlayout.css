@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .weatherbox{display:none;}
-.header_box .wrap .logo a .logo_image {width: 135px; background-image: url('/site/welfare/img/layout/logo.png'); background-size: contain; }
+.header_box .wrap .logo a .logo_image {width: 135px; background-image: url('../img/layout/logo.png'); background-size: contain; }
 .header_top .wrap:before {left: 95%;}
 .header_top .gnb ul{float:left;}
 .header_top .gnb ul{display:block;width:auto;box-sizing:border-box;}
