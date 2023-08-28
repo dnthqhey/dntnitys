@@ -5,7 +5,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="853b44bb-04b7-4348-bfa1-7bfdc19c9b3f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/common/css/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/common/css/font.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/women_welfare.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/road/css/font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/css/commonlayout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/css/mainlayout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/layout/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/Teenager_list.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/arrow2-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/arrow2-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/arrow2-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/arrow2-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/arrow2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/arrow3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/arrow4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/chick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/disabled_list.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/find_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/find_icon2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/find_icon3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/find_icon4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/go_link1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/go_link2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/helf_link.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/helf_link2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/helf_link3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/helf_link4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/lefttop_gm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/lefttop_senior-m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/lefttop_senior.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/lefttop_teen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/lefttop_wo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/link_more-m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/link_more.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/popupzone_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/popupzone_next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/popupzone_pause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/popupzone_prev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/quotation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/rightbottom_girl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/rightbottom_senior-m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/rightbottom_senior.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/rightbottom_teen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/rightbottom_wo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/senior-tulip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/senior_list.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/shortcut_item-wh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/shortcut_item.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/shortcut_item_after.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/speech_bubble-m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/speech_bubble.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/visual_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/visual_flower.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/welfare_title.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/welfare_title2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/welfare_title3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/welfare_title4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/img/main/woman_list.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/welfare/main.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +80,7 @@
     <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="2FT7gWRhbndY3sr9joek1h4GtIC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -105,7 +167,9 @@
       <workItem from="1692836957855" duration="4467000" />
       <workItem from="1692924980268" duration="1311000" />
       <workItem from="1692929933708" duration="1145000" />
-      <workItem from="1692942722445" duration="1625000" />
+      <workItem from="1692942722445" duration="4538000" />
+      <workItem from="1692952339343" duration="1193000" />
+      <workItem from="1693181218795" duration="757000" />
     </task>
     <servers />
   </component>
