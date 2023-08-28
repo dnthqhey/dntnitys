@@ -3,20 +3,20 @@
 @font-face{
     font-family:'SCDream';
     font-weight:300;
-    src:url('/site/road/font/SCDream-light.woff2') format('woff2'), url('/site/road/font/SCDream-light.woff') format('woff');
+    src:url('/common/font/SpoqaHanSans-Light.woff2') format('woff2');
 }
 @font-face{
     font-family:'SCDream';
     font-weight:400;
-    src:url('/site/road/font/SCDream-Regular.woff2') format('woff2'), url('/site/road/font/SCDream-Regular.woff') format('woff');
+    src:url('/common/font/SpoqaHanSans-Regular.woff2') format('woff2');
 }
 @font-face{
     font-family:'SCDream';
     font-weight:500;
-    src:url('/site/road/font/SCDream-Medium.woff2') format('woff2'), url('/site/road/font/SCDream-Medium.woff') format('woff');
+    src:url('/common/font/SpoqaHanSans-Bold.woff2') format('woff2');
 }
 @font-face{
     font-family:'SCDream';
     font-weight:600;
-    src:url('/site/road/font/SCDream-bold.woff2') format('woff2'), url('/site/road/font/SCDream-bold.woff') format('woff');
+    src:url('/road/font/SCDreambold.woff2') format('woff2');
 }
